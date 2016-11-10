@@ -176,6 +176,9 @@ include 'src/authorization.php';
 </div>
 
 <div class="container">
+
+Please use the following controls to complete each survey page, clicking the next page number to proceed.
+
 <nav>
 <ul class="pagination">
 <li>
