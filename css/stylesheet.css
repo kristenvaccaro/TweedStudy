@@ -1,0 +1,155 @@
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.totop {
+position:fixed;
+right: 0px;
+}
+
+.verticalLine {
+    border-left: thick solid #484848;
+}
+
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+
+#feed {
+	height: 100%;
+	overflow: scroll;
+}
+
+#feed2 {
+	height: 100%;
+	overflow: scroll;
+}
+
+#bootstrap-overrides .narrow {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#bootstrap-overrides .narrower {
+    width: 55%;
+    margin: 0 auto;
+}
+
+
+.tick {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-size: 5px;
+}
+
+div.flextainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.tweet:hover{
+	background-color:#eeeeea;
+}
+.tweet video{
+	max-height: 640px
+}
+
+hr { margin: 0px; }
+
+.astext {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.classWithPad { margin:10px; padding:10px; }
+
+#newpost a button {
+	color: black;
+	font-weight: lighter;
+	padding: 3px 6px
+}
+
+hr {
+	margin: 5px 0;
+}
+
+.type{
+	padding-left: 0px;
+}
+
+.type .typeColumn{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.profileimg{
+	height: auto;
+	width: 100%;
+	max-width: 42px;
+	max-height: 42px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.hashtag{
+	/*color: rgb(0,132,180);*/
+	font-weight: bold;
+}
+/*.hashtag:hover{
+	text-decoration: underline;
+}*/
+
+#loginWrap button{
+	vertical-align: text-bottom;
+}
+#loginWrap img{
+	border-radius: 24px;
+	vertical-align: text-bottom;
+	border-color: white;
+	border-width: 3px;
+	border-style: solid;
+}
+
+#loginWrap{
+	background-color:	rgb(72,72,72) ;
+	color: white;
+	padding: 5px;
+	margin-top: 5px;
+}
+#people{
+	background-color: rgb(208,208,208) ;
+	padding: 5px;
+}
+#content{
+	background-color: 	rgb(192,192,192);
+	padding: 5px;
+}
+#meta{
+	vertical-align: text-bottom;
+}
+#meta svg{
+	vertical-align: bottom;
+}
