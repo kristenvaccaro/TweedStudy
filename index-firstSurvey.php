@@ -5,18 +5,18 @@
 
 
 <?php
- 
+
 echo '<!-- Survey -->
 <div id="surveysection" class="row">
     <div class="col-md-5">
         <h3>Instructions</h3>
-    
-        <h3><small>While we collect information from Twitter, please complete the following demographic questions. The answers will be used to help us understand how representative our study sample is.</small></h3>
+
+        <h3><small>While we collect information from Twitter, please complete the following demographic questions. The answers will be used to help us understand how representative our study sample is. When we have finished populating your feed, a "Next" button will appear on the right (this may take a few minutes). </small></h3>
     </div>
-    
+
     <div class="col-md-7">
         <h3>Survey</h3>
-    
+
         <div class="survey">
             <form action="">
             <label class="statement">1. Please select your year of birth</label>
@@ -136,7 +136,7 @@ echo '<!-- Survey -->
             <option value="1901">1901</option>
             <option value="1900">1900</option>
             </select>
-    
+
             <label class="statement">2. What is your gender?</label>
             <select name="gender" id="gender">
             <option value="">Gender</option>
@@ -211,12 +211,12 @@ echo '<!-- Survey -->
     <option value="AP">Armed Forces Pacific</option>
     <option value="AE">Armed Forces Others</option>
     </select>
-    
-    
+
+
                             </form>
-        
+
         </div>
     </div>
 </div>';
-    
+
 ?>
