@@ -9,21 +9,16 @@ echo '<!-- instructions -->
         </div>
 
         <div class="col-md-4">
-            <h3><small>Imagine you are browsing this feed on a Sunday morning, while drinking coffee (or a similar leisurely browsing time). If controls are available, please use them while browsing your feed to make your ideal feed for leisurely browsing. Please browse for 30-60 seconds as you would in that situation.</small></h3>
+            <h3><small>Imagine you are browsing this feed on a Sunday morning, while drinking coffee (or other leisurely browsing time). Please browse for 10-20 seconds as you would in that situation.</small></h3>
         </div>';
 
 
         if ($value2 === "real" or $value2 === "random") {
 
-        echo '<!-- controls -->
+        echo '<!-- controls constantly show atm-->
         <div class="col-md-6">
-            <h3><small>Controls are available for this news feed. Please use them while browsing to make your ideal feed for leisurely browsing."</small></h3>
+            <h3><small>Controls are available for this news feed. Please use them for 10-20 seconds to make your ideal feed for a Sunday morning drinking coffee (or other leisurely browsing time)."</small></h3>
         </div>';
-        } else { echo '<!-- no controls -->
-        <div class="col-md-6">
-            <h3><small>No controls are available for this news feed. This area intentionally left blank."</small></h3>
-        </div>'
-
         }
 
 echo '<!--end of the row-->
