@@ -1,6 +1,6 @@
 
 <?php
-    
+
 $_SESSION[index][1] = true;
 
 $servername = "engr-cpanel-mysql.engr.illinois.edu";
@@ -21,21 +21,20 @@ if ($db->connect_error) {
 
 echo '<!-- Control Panel -->
 <div>
-    <button class="btn" id="toggle">Hide/Show</button>
     <div id="newpost">
         <div id="loginWrap">';
-    
+
         echo "<b>" . $_SESSION["user"]["screen_name"];
         echo "</b> <img src=" . $_SESSION['user']['profile_image_url'] . " alt='error'>";
-            
+
         echo '<a href="logout.php"><button class="btn" id="logout">Logout</button></a>
         </div>
     <!-- <h3> Control Panel </h3> -->
     <!-- <h4> See... </h4> --> ';
-    
+
 
     if ($value === "closeness") {
-        
+
         echo '<!-- closeness -->
         <div id="people">
             <div>
@@ -48,13 +47,13 @@ echo '<!-- Control Panel -->
             </div>
         </div>';
 
-        
+
     }
-    
- 
-    
+
+
+
     if ($value === "popularity") {
-        
+
         echo '<!-- popularity -->
         <div id="content">
             <div>
@@ -68,10 +67,10 @@ echo '<!-- Control Panel -->
                 <span>|</span>
             </div>
         </div>';
-        
+
     }
-    
-    
+
+
 
 echo '<!-- end divs -->
 </div>
