@@ -20,7 +20,6 @@
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
 
-  var_dump($value);
 
   //SQL Authorization
       $servername = "engr-cpanel-mysql.engr.illinois.edu";
