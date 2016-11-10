@@ -11,7 +11,7 @@ echo '<!-- Survey -->
     <div class="col-md-5">
         <h3>Instructions</h3>
 
-        <h3><small>While we collect information from Twitter, please complete the following demographic questions. The answers will be used to help us understand how representative our study sample is. When we have finished populating your feed, a "Next" button will appear on the right (this may take a few minutes). </small></h3>
+        <h3><small>While we collect information from Twitter, please complete the following demographic questions. The answers will be used to help us understand how representative our study sample is. When we have finished populating your feed, a "Next" button will appear on the right; this may take a few minutes. </small></h3>
     </div>
 
     <div class="col-md-7">
