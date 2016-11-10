@@ -238,9 +238,9 @@
         }
         $count_close = count($values_close);
 
-        $firstind_close = round( .3 * ( $count_close + 1 ) ) - 1;
+        $firstind_close = round( .25 * ( $count_close + 1 ) ) - 1;
         $secondind_close = round( .5 * ( $count_close + 1 ) ) - 1;
-        $thirdind_close = round( .7 * ( $count_close + 1 ) ) - 1;
+        $thirdind_close = round( .75 * ( $count_close + 1 ) ) - 1;
 
         $first_close = (float)$values_close[$firstind_close];
         $second_close = (float)$values_close[$secondind_close];
@@ -255,9 +255,9 @@
         }
         $count_popularity = count($values_popularity);
 
-        $firstind_popularity = round( .3 * ( $count_popularity + 1 ) ) - 1;
+        $firstind_popularity = round( .25 * ( $count_popularity + 1 ) ) - 1;
         $secondind_popularity = round( .5 * ( $count_popularity + 1 ) ) - 1;
-        $thirdind_popularity = round( .7 * ( $count_popularity + 1 ) ) - 1;
+        $thirdind_popularity = round( .75 * ( $count_popularity + 1 ) ) - 1;
 
         $first_popularity = (float)$values_popularity[$firstind_popularity];
         $second_popularity = (float)$values_popularity[$secondind_popularity];
@@ -623,9 +623,9 @@
         }
         $count_close = count($values_close);
 
-        $firstind_close = round( .3 * ( $count_close + 1 ) ) - 1;
+        $firstind_close = round( .25 * ( $count_close + 1 ) ) - 1;
         $secondind_close = round( .5 * ( $count_close + 1 ) ) - 1;
-        $thirdind_close = round( .7 * ( $count_close + 1 ) ) - 1;
+        $thirdind_close = round( .75 * ( $count_close + 1 ) ) - 1;
 
         $first_close = (float)$values_close[$firstind_close];
         $second_close = (float)$values_close[$secondind_close];
@@ -640,9 +640,9 @@
         }
         $count_popularity = count($values_popularity);
 
-        $firstind_popularity = round( .3 * ( $count_popularity + 1 ) ) - 1;
+        $firstind_popularity = round( .25 * ( $count_popularity + 1 ) ) - 1;
         $secondind_popularity = round( .5 * ( $count_popularity + 1 ) ) - 1;
-        $thirdind_popularity = round( .7 * ( $count_popularity + 1 ) ) - 1;
+        $thirdind_popularity = round( .75 * ( $count_popularity + 1 ) ) - 1;
 
         $first_popularity = (float)$values_popularity[$firstind_popularity];
         $second_popularity = (float)$values_popularity[$secondind_popularity];
