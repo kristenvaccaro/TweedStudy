@@ -17,14 +17,14 @@ window.onload = function () {
                              }
 
         var value = $("#"+dataString).val();
-                    
+
 //        console.log("test");
 //        console.log(dataString);
 //        console.log(value);
 //        console.log(thispage);
-        
+
         var middle = 0.501;
-                    
+
 //        if(dataString == 'distanceSlider'){
 //          var button = document.getElementById("close_friends");
 //          var button2 = document.getElementById("distant_friends");
@@ -53,103 +53,103 @@ window.onload = function () {
 //          button.style.fontWeight = "bold";
 //          button2.style.fontWeight = "normal";
 //        }
-                    
-                    
+
+
                     $.ajax({
-                           
+
                            type: "POST",
                            url: "../TweedStudy/src/set_value.php",
                            data: { dataString: dataString, value:value, middle: middle, thispage: thispage},
                            dataType: 'json',
                            cache: false,
                            success: function(data) {
-                           
-                           
-                           
+
+
+
                                $.ajax({
-                                      
+
                                       type: "POST",
                                       url: "../TweedStudy/src/pass_value_short.php",
                                       data: data,
                                       dataType: 'text',
                                       cache: false,
                                       success: function(response) {
-                                      
+
                                       console.log("real: getting into inner ajax");
                                       console.log(data);
 //                                      console.log("<?php echo $_SESSION['button']; ?>");
                                       console.log(response);
 //                                      console.log(thispage);
 //                                      console.log(response);
-                                      
+
 //                                      alert(response);
-                                      
+
                                       $("#feed-" +thispage).html(response);
-                            
-                                      
+
+
                                       }
                                       });
-                               
-                           
+
+
                                $.ajax({
-                                      
+
                                       type: "POST",
                                       url: "../TweedStudy/src/pass_value_rand_short.php",
                                       data:  data,
                                       dataType: 'text',
                                       cache: false,
                                       success: function(response) {
-                                      
+
                                       console.log("rand: getting into inner ajax");
 //                                      console.log(thispage);
                                        console.log(response);
-                                      
+
                                       //alert(response);
                                       $("#feed2-"+thispage).html(response);
-                                      
+
                                       }
                                       });
-                               
+
                            }
-                           
-                           
+
+
                            });
 
-   
-                    
 
-                    
+
+
+
 //        $.ajax({
-//                           
+//
 //               type: "POST",
 //               url: "../TweedStudy/src/pass_value.php",
 //               data: { dataString: dataString },
 //               dataType: 'text',
 //               cache: false,
 //               success: function(response) {
-//               
+//
 //               //alert(response);
 //               $("#feed").html(response);
-//               
+//
 //               }
 //               });
-                    
-        
+
+
 //        $.ajax({
-//               
+//
 //               type: "POST",
 //               url: "../TweedStudy/src/pass_value.php",
 //               data: { dataString: dataString },
 //               dataType: 'text',
 //               cache: false,
 //               success: function(response) {
-//               
+//
 //               //alert(response);
 //               $("#feed2").html(response);
-//               
+//
 //               }
 //               });
-    
+
 //         $.ajax({
 //
 //                type: "POST",
@@ -165,12 +165,12 @@ window.onload = function () {
 //
 //                }
 //                });
-                    
-    
+
+
     return false;
     });
-    
-    
+
+
   $("button").on('click', function( event ) {
 
                  //This is for Internet Explorer
@@ -182,87 +182,104 @@ window.onload = function () {
                                      }
                   console.log(dataString);
 
-                 
+
                  $.ajax({
-                        
+
                         type: "POST",
                         url: "../TweedStudy/src/set_value.php",
                         data: { dataString: dataString},
                         dataType: 'text',
                         cache: false,
                         success: function(data) {
-                        
-                        //alert(response);
-                        //                           $("#feed").html("Set value");
-                        
+
+
                         $.ajax({
-                               
+
                                type: "POST",
-                               url: "../TweedStudy/src/pass_value.php",
+                               url: "../TweedStudy/src/save_selection.php",
                                data: data,
                                dataType: 'text',
                                cache: false,
                                success: function(response) {
-                               
+
                                //alert(response);
-                               $("#feed").html(response);
-                               
+                               // $("#feed").html(response);
+
                                }
                                });
-                        
-                        
+
+
+                        //alert(response);
+                        //                           $("#feed").html("Set value");
+
                         $.ajax({
-                               
+
                                type: "POST",
-                               url: "../TweedStudy/src/pass_value_rand.php",
+                               url: "../TweedStudy/src/pass_value_short.php",
+                               data: data,
+                               dataType: 'text',
+                               cache: false,
+                               success: function(response) {
+
+                               //alert(response);
+                               $("#feed").html(response);
+
+                               }
+                               });
+
+
+                        $.ajax({
+
+                               type: "POST",
+                               url: "../TweedStudy/src/pass_value_rand_short.php",
                                data: { data},
                                dataType: 'text',
                                cache: false,
                                success: function(response) {
-                               
+
                                //alert(response);
                                $("#feed2").html(response);
-                               
+
                                }
                                });
-                        
+
                         }
-                        
-                        
+
+
                         });
-                 
-                 
+
+
 //                 $.ajax({
-//                        
+//
 //                        type: "POST",
 //                        url: "../TweedStudy/src/pass_value.php",
 //                        data: { dataString: dataString},
 //                        dataType: 'text',
 //                        cache: false,
 //                        success: function(response) {
-//                        
+//
 //                        //alert(response);
 //                        $("#feed").html(response);
-//                        
+//
 //                        }
 //                        });
-//                 
-//                 
+//
+//
 //                 $.ajax({
-//                        
+//
 //                        type: "POST",
 //                        url: "../TweedStudy/src/pass_value_rand.php",
 //                        data: { dataString: dataString},
 //                        dataType: 'text',
 //                        cache: false,
 //                        success: function(response) {
-//                        
+//
 //                        //alert(response);
 //                        $("#feed2").html(response);
-//                        
+//
 //                        }
 //                        });
-                 
+
                  //                 $.ajax({
 //
 //                        type: "POST",
@@ -271,30 +288,30 @@ window.onload = function () {
 //                        dataType: 'text',
 //                        cache: false,
 //                        success: function(response) {
-//                        
+//
 //                        //alert(response);
 //                        $("#feed").html(response);
-//                        
+//
 //                        }
 //                        });
-//                 
-//                 
+//
+//
 //                 $.ajax({
-//                        
+//
 //                        type: "POST",
 //                        url: "../TweedStudy/src/pass_value.php",
 //                        data: { dataString: dataString },
 //                        dataType: 'text',
 //                        cache: false,
 //                        success: function(response) {
-//                        
+//
 //                        //alert(response);
 //                        $("#feed2").html(response);
-//                        
+//
 //                        }
 //                        });
-                 
-    
+
+
 //                $.ajax({
 //
 //                        type: "POST",
@@ -310,10 +327,10 @@ window.onload = function () {
 //
 //                        }
 //                        });
-                 
 
-    
-    
+
+
+
 //
                 return false;
             });
