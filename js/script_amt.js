@@ -64,6 +64,21 @@ window.onload = function () {
                            cache: false,
                            success: function(data) {
 
+                              $.ajax({
+
+                               type: "POST",
+                               url: "../TweedStudy/src/save_selection.php",
+                               data: data,
+                               dataType: 'text',
+                               cache: false,
+                               success: function(response) {
+                                  console.log("saving their choice");
+                               //alert(response);
+                               // $("#feed").html(response);
+
+                               }
+                               });
+
 
 
                                $.ajax({
@@ -192,21 +207,6 @@ window.onload = function () {
                         cache: false,
                         success: function(data) {
 
-
-                        $.ajax({
-
-                               type: "POST",
-                               url: "../TweedStudy/src/save_selection.php",
-                               data: data,
-                               dataType: 'text',
-                               cache: false,
-                               success: function(response) {
-
-                               //alert(response);
-                               // $("#feed").html(response);
-
-                               }
-                               });
 
 
                         //alert(response);
