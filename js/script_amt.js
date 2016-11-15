@@ -64,6 +64,8 @@ window.onload = function () {
                            cache: false,
                            success: function(data) {
 
+                              alert(value);
+
                               $.ajax({
 
                                type: "POST",

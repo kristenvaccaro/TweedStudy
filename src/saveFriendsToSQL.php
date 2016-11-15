@@ -18,9 +18,9 @@
 
         // Friends List
           if($cursor == null){
-            $json_friends = $connection->get("friends/list", array("user_id" => $userid, "count" => 200));
+            $json_friends = $connection->get("friends/ids", array("user_id" => $userid, "count" => 200));
           }else{
-            $json_friends = $connection->get("friends/list", array("user_id" => $userid, "count" => 200, "cursor" => $cursor));
+            $json_friends = $connection->get("friends/ids", array("user_id" => $userid, "count" => 200, "cursor" => $cursor));
           }
 
         // Prepare and bind_param
