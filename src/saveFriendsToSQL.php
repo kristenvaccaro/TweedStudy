@@ -20,25 +20,42 @@
           if($cursor == null){
             $json_friends = array();
             $json_friends_ids = $connection->get("friends/ids", array("user_id" => $userid, "count" => 5000));
-            var_dump($json_friends_ids->{'ids'});
+            $cursor = $json_friends_ids->{'next_cursor'};
+            // var_dump($json_friends_ids->{'ids'});
             $ids = (array) $json_friends_ids->{'ids'};
             // var_dump($ids);
             $grp_ids = array_chunk($ids, 100);
             foreach ($grp_ids as $friend_ids){
             // foreach ($ids as $friend_id) {
-                var_dump($friend_ids);
+                // var_dump($friend_ids);
                 // var_dump($connection->get("users/lookup", array("user_id" => $friend_ids)));
                 $json_friends = array_merge($json_friends,$connection->get("users/lookup", array("user_id" => $friend_ids)));
-                var_dump($json_friends);
+                // var_dump($json_friends);
                  // $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_ids));
             // }
             }
           }else{
             $json_friends = array();
             $json_friends_ids = $connection->get("friends/ids", array("user_id" => $userid, "count" => 5000));
-            foreach ($json_friends_ids->{'ids'} as $friend_id) {
-                 $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_id));
+            $cursor = $json_friends_ids->{'next_cursor'};
+            // var_dump($json_friends_ids->{'ids'});
+            $ids = (array) $json_friends_ids->{'ids'};
+            // var_dump($ids);
+            $grp_ids = array_chunk($ids, 100);
+            foreach ($grp_ids as $friend_ids){
+            // foreach ($ids as $friend_id) {
+                // var_dump($friend_ids);
+                // var_dump($connection->get("users/lookup", array("user_id" => $friend_ids)));
+                $json_friends = array_merge($json_friends,$connection->get("users/lookup", array("user_id" => $friend_ids)));
+                // var_dump($json_friends);
+                 // $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_ids));
+            // }
             }
+            // $json_friends = array();
+            // $json_friends_ids = $connection->get("friends/ids", array("user_id" => $userid, "count" => 5000));
+            // foreach ($json_friends_ids->{'ids'} as $friend_id) {
+            //      $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_id));
+            // }
           }
 
         // Prepare and bind_param
@@ -61,10 +78,11 @@
 
         // Run attachments
           if($json_friends){
-            $jsonfriends = json_encode($json_friends);
-            $response = json_decode($jsonfriends,true);
-            $cursor = $response['next_cursor'];
-            foreach($response['users'] as $friend){
+            // $jsonfriends = json_encode($json_friends);
+            // $response = json_decode($jsonfriends,true);
+            // $cursor = $response['next_cursor'];
+            // foreach($response['users'] as $friend){
+            foreach ($json_friends as $friend){
               $user_id = $userid;
               $rank = $_SESSION["rank_counter"];
               $_SESSION["rank_counter"]++;
