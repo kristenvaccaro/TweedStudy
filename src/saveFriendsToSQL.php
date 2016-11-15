@@ -83,6 +83,7 @@
             // $cursor = $response['next_cursor'];
             // foreach($response['users'] as $friend){
             foreach ($json_friends as $friend){
+              $friend = (array)$friend;
               $user_id = $userid;
               $rank = $_SESSION["rank_counter"];
               $_SESSION["rank_counter"]++;
