@@ -22,11 +22,16 @@
             $json_friends_ids = $connection->get("friends/ids", array("user_id" => $userid, "count" => 5000));
             var_dump($json_friends_ids->{'ids'});
             $ids = (array) $json_friends_ids->{'ids'};
-            var_dump($ids);
-            foreach ($ids as $friend_id) {
-                var_dump($friend_id);
-                var_dump($connection->get("users/lookup", array("user_id" => $friend_id)));
-                 $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_id));
+            // var_dump($ids);
+            $grp_ids = array_chunk($ids, 100);
+            foreach ($grp_ids as $friend_ids){
+            // foreach ($ids as $friend_id) {
+                var_dump($friend_ids);
+                // var_dump($connection->get("users/lookup", array("user_id" => $friend_ids)));
+                $json_friends = array_merge($json_friends,$connection->get("users/lookup", array("user_id" => $friend_ids)));
+                var_dump($json_friends);
+                 // $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_ids));
+            // }
             }
           }else{
             $json_friends = array();
