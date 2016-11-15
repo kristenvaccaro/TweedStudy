@@ -24,6 +24,7 @@
             $ids = (array) $json_friends_ids->{'ids'};
             var_dump($ids);
             foreach ($ids as $friend_id) {
+                var_dump($friend_id);
                  $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_id));
             }
           }else{
