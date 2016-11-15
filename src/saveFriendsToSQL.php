@@ -20,13 +20,15 @@
           if($cursor == null){
             $json_friends = array();
             $json_friends_ids = $connection->get("friends/ids", array("user_id" => $userid, "count" => 5000));
+            var_dump($json_friends_ids);
+            $json_friends_ids=json_decode($json_friends_ids, true);
             foreach ($json_friends_ids['ids'] as $friend_id) {
                  $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_id));
             }
           }else{
             $json_friends = array();
             $json_friends_ids = $connection->get("friends/ids", array("user_id" => $userid, "count" => 5000));
-            foreach ($json_friends_ids['ids'] as $friend_id) {
+            foreach ($json_friends_ids->{'ids'} as $friend_id) {
                  $json_friends[] = $connection->get("users/lookup", array("user_id" => $friend_id));
             }
           }
