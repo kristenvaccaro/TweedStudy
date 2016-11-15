@@ -17,6 +17,16 @@ window.onload = function () {
                              }
 
         var value = $("#"+dataString).val();
+                    
+        try {
+                    // PAGE THAT WE'RE LEAVING
+                    $pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);
+                    
+                    }
+                    catch(err) {
+                    $pageleaving = '0';
+                    
+                    }
 
 //        console.log("test");
 //        console.log(dataString);
@@ -59,7 +69,7 @@ window.onload = function () {
 
                            type: "POST",
                            url: "../TweedStudy/src/set_value.php",
-                           data: { dataString: dataString, value:value, middle: middle, thispage: thispage},
+                           data: { page: $pageleaving, dataString: dataString, value:value, middle: middle, thispage: thispage},
                            dataType: 'json',
                            cache: false,
                            success: function(data) {
