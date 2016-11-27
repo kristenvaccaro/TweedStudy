@@ -34,8 +34,25 @@ echo '<!--end of the row-->
 
 <!-- feed+controls -->
 <div class="feed+controls">
-    <div class="row">
-        <div class="col-md-6 col-sm-12 col-sm-push-6">
+    <div class="row">';
+
+    if ($value2 === "real" or $value2 === "random") {
+        echo '<!-- controls constantly show atm-->
+        <div class="col-sm-12 col-md-6 col-md-push-6">
+            <div class="controls">
+                <h3>Controls</h3>
+                <h4 class="controltype"></h4>
+                <div id="controlcontent">';
+
+                    include('index-00-controls.php');
+
+                echo '<!-- end of controls -->
+                </div>
+            </div>
+        </div>';
+        }
+
+    echo' <div class="col-sm-12 col-md-6 col-md-pull-6">
             <a href="#"> </a>';
 
                 if ($value2 === "real" or $value2 === "none") {
@@ -53,22 +70,6 @@ echo '<!--end of the row-->
             echo '<!-- end of col-md-6 div-->
         </div>';
 
-
-        if ($value2 === "real" or $value2 === "random") {
-        echo '<!-- controls constantly show atm-->
-        <div class="col-md-6 col-sm-12 col-sm-pull-6">
-            <div class="controls">
-                <h3>Controls</h3>
-                <h4 class="controltype"></h4>
-                <div id="controlcontent">';
-
-                    include('index-00-controls.php');
-
-                echo '<!-- end of controls -->
-                </div>
-            </div>
-        </div>';
-        }
 
     echo '<!--end of row-->
     </div>
