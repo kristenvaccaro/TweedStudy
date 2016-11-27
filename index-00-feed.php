@@ -53,8 +53,8 @@ echo '<!--end of the row-->
         }
         else {
 
-            <!-- controls constantly show atm-->
-        echo '<div class="col-sm-0 col-md-5 col-md-push-7">
+        echo ' <!-- empty div for spacing on med and larger screens--><div class="col-sm-0 col-md-5 col-md-push-7">
+
         </div>';
 
         }
