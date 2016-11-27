@@ -35,7 +35,7 @@ echo '<!--end of the row-->
 <!-- feed+controls -->
 <div class="feed+controls">
     <div class="row">
-        <div class="col-md-6 col-sm-6 col-sm-pull-6">
+        <div class="col-md-6 col-sm-6 col-sm-push-6">
             <a href="#"> </a>';
 
                 if ($value2 === "real" or $value2 === "none") {
@@ -56,7 +56,7 @@ echo '<!--end of the row-->
 
         if ($value2 === "real" or $value2 === "random") {
         echo '<!-- controls constantly show atm-->
-        <div class="col-md-6 col-sm-6 col-sm-push-6">
+        <div class="col-md-6 col-sm-6 col-sm-pull-6">
             <div class="controls">
                 <h3>Controls</h3>
                 <h4 class="controltype"></h4>
