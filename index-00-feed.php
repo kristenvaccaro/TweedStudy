@@ -51,6 +51,13 @@ echo '<!--end of the row-->
             </div>
         </div>';
         }
+        else {
+
+            <!-- controls constantly show atm-->
+        <div class="col-sm-0 col-md-5 col-md-push-7">
+        </div>
+
+        }
 
     echo' <div class="col-sm-12 col-md-7 col-md-pull-5">
             <a href="#"> </a>';
