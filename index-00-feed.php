@@ -54,8 +54,8 @@ echo '<!--end of the row-->
         else {
 
             <!-- controls constantly show atm-->
-        <div class="col-sm-0 col-md-5 col-md-push-7">
-        </div>
+        echo '<div class="col-sm-0 col-md-5 col-md-push-7">
+        </div>';
 
         }
 
