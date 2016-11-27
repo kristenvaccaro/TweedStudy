@@ -38,7 +38,7 @@ echo '<!--end of the row-->
 
     if ($value2 === "real" or $value2 === "random") {
         echo '<!-- controls constantly show atm-->
-        <div class="col-sm-12 col-md-5 col-md-push-5">
+        <div class="col-sm-12 col-md-5 col-md-push-7">
             <div class="controls">
                 <h3>Controls</h3>
                 <h4 class="controltype"></h4>
@@ -52,7 +52,7 @@ echo '<!--end of the row-->
         </div>';
         }
 
-    echo' <div class="col-sm-12 col-md-7 col-md-pull-7">
+    echo' <div class="col-sm-12 col-md-7 col-md-pull-5">
             <a href="#"> </a>';
 
                 if ($value2 === "real" or $value2 === "none") {
