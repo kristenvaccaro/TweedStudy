@@ -103,9 +103,9 @@ window.onload = function () {
                                       success: function(response) {
 
                                       console.log("real: getting into inner ajax");
-                                      console.log(data);
+//                                      console.log(data);
 //                                      console.log("<?php echo $_SESSION['button']; ?>");
-                                      console.log(response);
+//                                      console.log(response);
 //                                      console.log(thispage);
 //                                      console.log(response);
 
@@ -129,7 +129,7 @@ window.onload = function () {
 
                                       console.log("rand: getting into inner ajax");
 //                                      console.log(thispage);
-                                       console.log(response);
+//                                       console.log(response);
 
                                       //alert(response);
                                       $("#feed2-"+thispage).html(response);
