@@ -20,6 +20,7 @@
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
 
+  echo $page;
 
   //SQL Authorization
       $servername = "engr-cpanel-mysql.engr.illinois.edu";
@@ -36,7 +37,7 @@
       $user_id = $_SESSION["user_id"];
 
 
-      $sql = "UPDATE survey_responses SET `{$value}` = `{$value}` + 1 where user_id = {$user_id} and page = {$page}";
+      // $sql = "UPDATE survey_responses SET `{$value}` = `{$value}` + 1 where user_id = {$user_id} and page = {$page}";
 
       if(!$result = $db->query($sql)){
           die('There was an error running the query [' . $db->error . ']');
