@@ -15,7 +15,7 @@
 //    echo $_POST['dataString'];
 
 
-  $page = $_POST['page'];
+  $page = $_POST['thispage'];
 	$dataString = $_POST['dataString'];
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
