@@ -30,29 +30,29 @@
 
       $db = new mysqli($servername, $username, $password, $dbname);
 
-      if($db->connect_errno > 0){
-          die('Unable to connect to database [' . $db->connect_error . ']');
-      }
+      // if($db->connect_errno > 0){
+      //     die('Unable to connect to database [' . $db->connect_error . ']');
+      // }
 
-      $user_id = $_SESSION["user_id"];
+      // $user_id = $_SESSION["user_id"];
 
 
-      // $sql = "UPDATE survey_responses SET `{$value}` = `{$value}` + 1 where user_id = {$user_id} and page = {$page}";
+      // // $sql = "UPDATE survey_responses SET `{$value}` = `{$value}` + 1 where user_id = {$user_id} and page = {$page}";
 
-      if(!$result = $db->query($sql)){
-          die('There was an error running the query [' . $db->error . ']');
-      }
+      // if(!$result = $db->query($sql)){
+      //     die('There was an error running the query [' . $db->error . ']');
+      // }
 
-        if($result->num_rows === 0)
-        {
-            echo 'There are no tweets in your feed for this selection';
-        }
-        else
-        {
-            while($row = $result->fetch_assoc()){
-                printEachTweet($row);
-            }
-        }
+      //   if($result->num_rows === 0)
+      //   {
+      //       echo 'There are no tweets in your feed for this selection';
+      //   }
+      //   else
+      //   {
+      //       while($row = $result->fetch_assoc()){
+      //           printEachTweet($row);
+      //       }
+      //   }
 
       $db->close();
 
