@@ -19,7 +19,7 @@
 	$dataString = $_POST['dataString'];
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
-  $page = $_POST['value'];
+  $page = $_POST['pageleaving'];
 
   echo $page;
 
