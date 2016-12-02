@@ -77,6 +77,7 @@ window.onload = function () {
                            success: function(data) {
 
                               alert(value);
+                              alert(pageleaving);
 
                               $.ajax({
 
