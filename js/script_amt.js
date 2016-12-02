@@ -80,7 +80,7 @@ window.onload = function () {
 
                                type: "POST",
                                // url: "../TweedStudy/src/save_selection.php",
-                               url: "../TweedStudy/src/pass_value_short.php",
+                               url: "../TweedStudy/src/save_selection_simple.php",
                                data: data,
                                dataType: 'text',
                                cache: false,
