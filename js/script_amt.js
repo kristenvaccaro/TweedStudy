@@ -28,6 +28,8 @@ window.onload = function () {
 
                     }
 
+        console.log("pageleaving is " + pageleaving);
+
 //        console.log("test");
 //        console.log(dataString);
 //        console.log(value);
