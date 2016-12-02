@@ -88,6 +88,7 @@ window.onload = function () {
                                dataType: 'text',
                                cache: false,
                                success: function(response) {
+                                alert(data['pageleaving']);
                                   console.log("saving their choice");
                                  console.log(response);
                                //alert(response);
