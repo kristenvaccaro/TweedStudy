@@ -9,22 +9,24 @@
 
 
 //    var_dump($_SESSION['button']);
-    
+
 //    echo "\n";
-    
+
 //    echo $_POST['dataString'];
-    
-    
+
+
 
 	$dataString = $_POST['dataString'];
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
-    
+
+  echo $dataString;
+
     $_SESSION['dataString'] = $dataString;
     $_SESSION['value'] = $value;
 
 //    echo $_POST['dataString'];
 //    echo $dataString;
-    
-	printTweets_SQL_short();
+
+	// printTweets_SQL_short();
 ?>
