@@ -87,14 +87,20 @@ window.onload = function () {
                                data: data,
                                dataType: 'text',
                                cache: false,
-                               success: function(response) {
-                                alert(data['pageleaving']);
+                               success: function(data) {
                                   console.log("saving their choice");
-                                 console.log(response);
+                                 console.log(data['pageleaving']);
                                //alert(response);
                                // $("#feed").html(response);
 
                                }
+                               // success: function(response) {
+                               //    console.log("saving their choice");
+                               //   console.log(response);
+                               // //alert(response);
+                               // // $("#feed").html(response);
+
+                               // }
                                });
 
 
