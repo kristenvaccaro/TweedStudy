@@ -17,15 +17,15 @@ window.onload = function () {
                              }
 
         var value = $("#"+dataString).val();
-                    
+
         try {
                     // PAGE THAT WE'RE LEAVING
                     $pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);
-                    
+
                     }
                     catch(err) {
                     $pageleaving = '0';
-                    
+
                     }
 
 //        console.log("test");
@@ -79,7 +79,8 @@ window.onload = function () {
                               $.ajax({
 
                                type: "POST",
-                               url: "../TweedStudy/src/save_selection.php",
+                               // url: "../TweedStudy/src/save_selection.php",
+                               url: "../TweedStudy/src/pass_value_short.php",
                                data: data,
                                dataType: 'text',
                                cache: false,
