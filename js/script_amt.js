@@ -20,11 +20,11 @@ window.onload = function () {
 
         try {
                     // PAGE THAT WE'RE LEAVING
-                    $pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);
+                    var pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);
 
                     }
                     catch(err) {
-                    $pageleaving = '0';
+                    var pageleaving = '0';
 
                     }
 
