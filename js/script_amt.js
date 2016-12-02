@@ -71,7 +71,7 @@ window.onload = function () {
 
                            type: "POST",
                            url: "../TweedStudy/src/set_value.php",
-                           data: { dataString: dataString, value:value, middle: middle, pageleaving: pageleaving},
+                           data: { pageleaving: pageleaving, dataString: dataString, value:value, middle: middle},
                            dataType: 'json',
                            cache: false,
                            success: function(data) {
