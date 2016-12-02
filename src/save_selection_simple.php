@@ -19,8 +19,9 @@
 	$dataString = $_POST['dataString'];
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
+  $page = $_POST['thispage'];
 
-  echo $dataString;
+  echo $page;
 
     $_SESSION['dataString'] = $dataString;
     $_SESSION['value'] = $value;
