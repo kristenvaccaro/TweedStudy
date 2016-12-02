@@ -89,7 +89,7 @@ window.onload = function () {
                                cache: false,
                                success: function(data) {
                                   console.log("saving their choice");
-                                 console.log(data['pageleaving']);
+                                 console.log(data['middle']);
                                //alert(response);
                                // $("#feed").html(response);
 
