@@ -74,23 +74,23 @@ window.onload = function () {
                            data: { pageleaving: pageleaving, dataString: dataString, value:value, middle: middle},
                            dataType: 'json',
                            cache: false,
-                           success: function(data) {
+                           success: function(response) {
 
                               alert(value);
                               alert(pageleaving);
-                              console.log(data);
+                              console.log(response);
 
                               $.ajax({
 
                                type: "POST",
                                // url: "../TweedStudy/src/save_selection.php",
                                url: "../TweedStudy/src/save_selection_simple.php",
-                               data: {pageleaving: data['pageleaving'], dataString: data['dataString'], value:data['value'], middle: data['middle']},
+                               data: { pageleaving: response['pageleaving'], dataString: response['dataString'], value:response['value'], middle: response['middle']},
                                dataType: 'json',
                                cache: false,
-                               success: function(data) {
+                               success: function(response) {
                                   console.log("saving their choice");
-                                 console.log(data['middle']);
+                                 console.log(response['pageleaving']);
                                //alert(response);
                                // $("#feed").html(response);
 

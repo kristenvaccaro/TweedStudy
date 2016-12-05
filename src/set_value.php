@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    
+
     function console_log( $data ){
         echo '<script>';
         echo 'console.log('. json_encode( $data ) .')';
@@ -32,16 +32,17 @@
 	$dataString = $_POST['dataString'];
 	$value = $_POST['value'];
 	$middle = $_POST['middle'];
-    
+  $page = $_POST['pageleaving'];
+
 //    echo "test inside setvalue.php";
-    
+
 //    $indstring = "we are in set_value.php";
 //    console_log( $indstring );
 //    console_log( $value );
 
 //    echo $dataString;
-    
-    $myArray = array('dataString' => $dataString, 'value' => $value, 'middle' => $middle);
+
+    $myArray = array('dataString' => $dataString, 'value' => $value, 'middle' => $middle, 'pageleaving' => $page);
 //    echo $myArray;
     $myJSONString = json_encode($myArray);
     echo $myJSONString;
