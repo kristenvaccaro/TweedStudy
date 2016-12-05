@@ -47,11 +47,11 @@
       $user_id = $_SESSION["user_id"];
 
 
-      $sql = "INSERT INTO survey_responses (user_id, page, test) VALUES (?,?,1)";
+      // $sql = "INSERT INTO survey_responses (user_id, page, test) VALUES (?,?,1)";
 
-      if(!$result = $db->query($sql)){
-          die('There was an error running the query [' . $db->error . ']');
-      }
+      // if(!$result = $db->query($sql)){
+      //     die('There was an error running the query [' . $db->error . ']');
+      // }
 
        $db->close();
 
