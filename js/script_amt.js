@@ -90,7 +90,7 @@ window.onload = function () {
                                cache: false,
                                success: function(response) {
                                   console.log("saving their choice");
-                                 console.log(response['pageleaving']);
+                                  console.log(response);
                                //alert(response);
                                // $("#feed").html(response);
 
@@ -110,7 +110,7 @@ window.onload = function () {
 
                                       type: "POST",
                                       url: "../TweedStudy/src/pass_value_short.php",
-                                      data: data,
+                                      data: response,
                                       dataType: 'text',
                                       cache: false,
                                       success: function(response) {
@@ -135,7 +135,7 @@ window.onload = function () {
 
                                       type: "POST",
                                       url: "../TweedStudy/src/pass_value_rand_short.php",
-                                      data:  data,
+                                      data:  response,
                                       dataType: 'text',
                                       cache: false,
                                       success: function(response) {
