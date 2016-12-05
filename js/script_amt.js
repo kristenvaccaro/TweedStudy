@@ -76,9 +76,9 @@ window.onload = function () {
                            cache: false,
                            success: function(response) {
 
-                              alert(value);
-                              alert(pageleaving);
-                              console.log(response);
+                              // alert(value);
+                              // alert(pageleaving);
+                              // console.log(response);
 
                               $.ajax({
 
@@ -90,7 +90,7 @@ window.onload = function () {
                                cache: false,
                                success: function(response) {
                                   console.log("saving their choice");
-                                  console.log(response);
+                                  // console.log(response);
                                //alert(response);
                                // $("#feed").html(response);
 
