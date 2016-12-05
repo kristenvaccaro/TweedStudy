@@ -53,7 +53,7 @@
       //     die('There was an error running the query [' . $db->error . ']');
       // }
 
-    $stmt = $db->prepare("INSERT INTO survey_responses (user_id, page, test) VALUES (?,?,1)");
+    $stmt = $db->prepare("INSERT INTO survey_responses (user_id, page, test) VALUES (?,?,1) ON DUPLICATE KEY UPDATE test = test + 1");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
