@@ -26,12 +26,14 @@
     $_SESSION['dataString'] = $dataString;
     $_SESSION['value'] = $value;
 
+    $user_id = $_SESSION["user_id"];
+
 //    echo $_POST['dataString'];
 //    echo $dataString;
 
 	// printTweets_SQL_short();
 
-$servername = "engr-cpanel-mysql.engr.illinois.edu";
+      $servername = "engr-cpanel-mysql.engr.illinois.edu";
       $username = "twitterf_user";
       $password = "IIA@kT$7maLt";
       $dbname = "twitterf_tweet_store";
@@ -50,7 +52,6 @@ $servername = "engr-cpanel-mysql.engr.illinois.edu";
       if(!$result = $db->query($sql)){
           die('There was an error running the query [' . $db->error . ']');
       }
-
 
        $db->close();
 
