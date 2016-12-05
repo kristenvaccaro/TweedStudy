@@ -53,6 +53,24 @@
       //     die('There was an error running the query [' . $db->error . ']');
       // }
 
+    $stmt = $db->prepare("INSERT INTO survey_responses (user_id, page, test) VALUES (?,?,1)");
+
+    if ( false===$stmt ) {
+        die('prepare() failed: ' . htmlspecialchars($mysqli->error));
+    }
+
+    $stmt->bind_param("ss", $user_id, $page);
+
+    $rc2 = $stmt->bind_param("ss",  $user_id, $page);
+
+    if ( false===$rc2 ) {
+        // again execute() is useless if you can't bind the parameters. Bail out somehow.
+        die('bind_param() failed: ' . htmlspecialchars($stmt->error));
+    }
+
+      $stmt->execute();
+      $stmt->close();
+
        $db->close();
 
 
