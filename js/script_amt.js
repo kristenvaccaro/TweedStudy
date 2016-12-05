@@ -85,7 +85,7 @@ window.onload = function () {
                                type: "POST",
                                // url: "../TweedStudy/src/save_selection.php",
                                url: "../TweedStudy/src/save_selection_simple.php",
-                               data: { pageleaving: response['pageleaving'], dataString: response['dataString'], value:response['value'], middle: response['middle']},
+                               data: response,
                                dataType: 'json',
                                cache: false,
                                success: function(response) {
