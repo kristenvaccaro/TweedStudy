@@ -21,7 +21,7 @@
 	$middle = $_POST['middle'];
   $page = $_POST['pageleaving'];
 
-  echo $page;
+  echo $value;
 
     $_SESSION['dataString'] = $dataString;
     $_SESSION['value'] = $value;
@@ -53,7 +53,7 @@
       //     die('There was an error running the query [' . $db->error . ']');
       // }
 
-    $stmt = $db->prepare("INSERT INTO survey_responses (user_id, page, {$value}) VALUES (?,?,1) ON DUPLICATE KEY UPDATE {$value} = {$value} + 1");
+    $stmt = $db->prepare("INSERT INTO survey_responses (user_id, page, `{$value}`) VALUES (?,?,1) ON DUPLICATE KEY UPDATE `{$value}` = `{$value}` + 1");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
