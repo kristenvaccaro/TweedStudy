@@ -276,7 +276,7 @@ function showUI(_id,_size){
 
     $('.indicator').removeClass('active');
     $('#li'+_id).addClass('active');
-    for (i = 1; i < _size; i++) {
+    for (i = 1; i < _size + 1; i++) {
         $('#p'+i).css('display','none');
     }
     $('#p'+_id).css('display','inline');
