@@ -34,7 +34,7 @@ form .likert:before {
 }
 form .likert li {
     display:inline-block;
-    width:12%;
+    width:17%;
     text-align:center;
     vertical-align: top;
 }
@@ -44,7 +44,7 @@ form .likert li input[type=radio] {
     top:0;
     left:50%;
     margin-left:-6px;
-    
+
 }
 form .likert li label {
     width:100%;
