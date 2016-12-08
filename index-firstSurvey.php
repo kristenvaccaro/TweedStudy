@@ -200,7 +200,7 @@ echo '<!-- Survey -->
 
     <div style="margin:25px 0;">
 
-    <span>We are now creating your personalized feeds. When the next button appears on the left, please click it to proceed (may take a few minutes).</span>
+    <span>We are now creating your personalized feeds. When the next button appears on the right, please click it to proceed (this may take a few minutes).</span>
 
     </div>
 
