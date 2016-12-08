@@ -198,7 +198,7 @@ echo '<!-- Survey -->
 
         </div>
 
-    <img src="img/twitter_bird.gif"/>
+    <img src="../img/twitter_bird.gif"/>
 
     <span>We are creating your personalized feeds. When the next button appears on the left, please click it to proceed (may take a few minutes).</span>
 
