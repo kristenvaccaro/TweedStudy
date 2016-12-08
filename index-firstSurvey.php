@@ -8,11 +8,6 @@
 
 echo '<!-- Survey -->
 <div id="surveysection" class="row">
-    <div class="col-md-5">
-        <h3>Instructions</h3>
-
-        <h3><small>While we collect information from Twitter, please complete the following demographic questions. The answers will be used to help us understand how representative our study sample is. When we have finished populating your feed, a "Next" button will appear on the right; this may take a few minutes. </small></h3>
-    </div>
 
     <div class="col-md-7">
         <h3>Survey</h3>
@@ -23,20 +18,6 @@ echo '<!-- Survey -->
             <select name="dob-year" id="dob-year">
             <option value="">Year</option>
             <option value="">----</option>
-            <option value="2012">2012</option>
-            <option value="2011">2011</option>
-            <option value="2010">2010</option>
-            <option value="2009">2009</option>
-            <option value="2008">2008</option>
-            <option value="2007">2007</option>
-            <option value="2006">2006</option>
-            <option value="2005">2005</option>
-            <option value="2004">2004</option>
-            <option value="2003">2003</option>
-            <option value="2002">2002</option>
-            <option value="2001">2001</option>
-            <option value="2000">2000</option>
-            <option value="1999">1999</option>
             <option value="1998">1998</option>
             <option value="1997">1997</option>
             <option value="1996">1996</option>
@@ -213,9 +194,14 @@ echo '<!-- Survey -->
     </select>
 
 
-                            </form>
+    </form>
 
         </div>
+
+    <img src='img/twitter_bird.gif'/>
+
+    <span>We are creating your personalized feeds. When the next button appears on the left, please click it to proceed (may take a few minutes).</span>
+
     </div>
 </div>';
 
