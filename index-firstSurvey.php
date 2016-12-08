@@ -198,9 +198,17 @@ echo '<!-- Survey -->
 
         </div>
 
-    <img src="img/twitter-bird.gif">
+    <div class="col-md-7">
 
-    <span>We are creating your personalized feeds. When the next button appears on the left, please click it to proceed (may take a few minutes).</span>
+    <span>We are now creating your personalized feeds. When the next button appears on the left, please click it to proceed (may take a few minutes).</span>
+
+    </div>
+
+    <div class="col-md-7">
+
+    <img src="img/twitter-bird.gif" style="max-width:50%">
+
+    </div>
 
     </div>
 </div>';
