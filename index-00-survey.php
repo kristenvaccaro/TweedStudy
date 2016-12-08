@@ -33,19 +33,10 @@ echo '<!-- Survey -->
                 <label>Disagree</label>
                 </li>
 
-                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-1" value="some_disagree">
-                <label>Somewhat disagree</label>
-                </li>
 
                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-1" value="neutral">
                 <label>Neutral</label>
-                </li>
-
-                                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-1" value="some_agree">
-                <label>Somewhat agree</label>
                 </li>
 
                  <li>
@@ -74,20 +65,12 @@ echo '<!-- Survey -->
                 <label>Disagree</label>
                 </li>
 
-                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-2" value="some_disagree">
-                <label>Somewhat disagree</label>
-                </li>
 
                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-2" value="neutral">
                 <label>Neutral</label>
                 </li>
 
-                                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-2" value="some_agree">
-                <label>Somewhat agree</label>
-                </li>
 
                  <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-2" value="agree">
@@ -114,20 +97,12 @@ echo '<!-- Survey -->
                 <label>Disagree</label>
                 </li>
 
-                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="some_disagree">
-                <label>Somewhat disagree</label>
-                </li>
 
                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-3" value="neutral">
                 <label>Neutral</label>
                 </li>
 
-                                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="some_agree">
-                <label>Somewhat agree</label>
-                </li>
 
                  <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-3" value="agree">
@@ -155,19 +130,10 @@ echo '<!-- Survey -->
                 <label>Disagree</label>
                 </li>
 
-                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-4" value="some_disagree">
-                <label>Somewhat disagree</label>
-                </li>
 
                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-4" value="neutral">
                 <label>Neutral</label>
-                </li>
-
-                                <li>
-                <input type="radio" name="likert-'; echo $page_id; echo '-4" value="some_agree">
-                <label>Somewhat agree</label>
                 </li>
 
                  <li>
