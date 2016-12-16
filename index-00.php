@@ -103,7 +103,7 @@ include 'src/authorization.php';
 <!-- Page Heading -->
 <div class="row">
 <div class="col-lg-12">
-<h1 class="page-header">Twitter News Feed Study
+<h1 class="page-header" style="display:inline;">Twitter News Feed Study
 </h1> <nav>
 <ul class="pagination">
 
@@ -115,6 +115,7 @@ include 'src/authorization.php';
         echo " <li class='indicator' id='li".$value."' name='li".$value."'><a onclick='showUI(".$value.",".count($pages).")';>".$index."</a></li>";
         $index++;
     }
+    $pages=[];
     ?>
 
 </ul>
