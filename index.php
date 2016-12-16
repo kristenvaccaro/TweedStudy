@@ -166,6 +166,8 @@ session_start();
 								<br>
 								<button id="nextstep" class="btn"> Next </button>
 
+                <script type="text/javascript"> $("img").css('display', 'none'); </script>
+
               <?php
                     // $servername = "engr-cpanel-mysql.engr.illinois.edu";
                     // $username = "twitterf_user";
