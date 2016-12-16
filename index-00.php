@@ -181,11 +181,6 @@ Please use the following controls to complete each survey page, clicking the nex
 
 <nav>
 <ul class="pagination">
-<li>
-<a href="#" aria-label="Previous">
-<span aria-hidden="true">&laquo;</span>
-</a>
-</li>
 
 <?php
     $index=1;
@@ -196,11 +191,6 @@ Please use the following controls to complete each survey page, clicking the nex
     }
     ?>
 
-<li>
-<a href="#" aria-label="Next">
-<span aria-hidden="true">&raquo;</span>
-</a>
-</li>
 </ul>
 </nav>
 </div> <!--  end container for indentation -->
