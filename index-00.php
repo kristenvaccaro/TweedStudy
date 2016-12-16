@@ -112,7 +112,7 @@ include 'src/authorization.php';
     $index=1;
     foreach($pages as $value)
     {
-        echo " <li class='indicator' id='li".$value."' name='li".$value."'><a style="padding: 3px 6px;" onclick='showUI(".$value.",".count($pages).")';>".$index."</a></li>";
+        echo " <li class='indicator' id='li".$value."' name='li".$value."'><a style='padding: 3px 6px;' onclick='showUI(".$value.",".count($pages).")';>".$index."</a></li>";
         $index++;
     }
     $pages=[];
