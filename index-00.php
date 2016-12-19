@@ -107,7 +107,9 @@ include 'src/authorization.php';
 </h1> <nav style ="display:inline;">
 <ul class="pagination">
 
-<?php
+<span id="pagecounter"> </span>
+
+<!-- <?php
     $pages=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
     $index=1;
     foreach($pages as $value)
@@ -117,7 +119,7 @@ include 'src/authorization.php';
     }
     $pages=[];
     ?>
-
+ -->
 </ul>
 </nav>
 </div>
@@ -291,6 +293,8 @@ function showUI(_id,_size){
     thispage = _id;
 
     $("html, body").animate({ scrollTop: 0 }, "slow");
+
+    $('#pagecounter').html('<h1>Page ' + _id + ' of 19</h1>')
 
 //    $.post("src/clear_all.php",_id);
 
