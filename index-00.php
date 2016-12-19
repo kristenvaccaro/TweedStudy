@@ -110,10 +110,7 @@ include 'src/authorization.php';
 
 <!-- <nav style ="display:inline;">
 <ul class="pagination">
-
-
-
-<!-- <?php
+<?php
     $pages=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
     $index=1;
     foreach($pages as $value)
@@ -123,10 +120,9 @@ include 'src/authorization.php';
     }
     $pages=[];
     ?>
- -->
-
 </ul>
 </nav> -->
+
 </div>
 </div>
 
