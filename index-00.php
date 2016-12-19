@@ -101,7 +101,7 @@ include 'src/authorization.php';
 <div class="container">
 
 <!-- Page Heading -->
-<div class="row">
+<div class="row" style="margin: 0 0;">
 <div class="col-lg-12" id="header-footer">
 <span id="pagecounter"> </span>
 <h1 class="page-header">Twitter News Feed Study
