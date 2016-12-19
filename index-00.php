@@ -103,10 +103,10 @@ include 'src/authorization.php';
 <!-- Page Heading -->
 <div class="row">
 <div class="col-lg-12">
-<h1 class="page-header" style="display:inline;">Twitter News Feed Study
+<span id="pagecounter" style="float:right;"> </span>
+<h1 class="page-header">Twitter News Feed Study
 </h1>
 
-<span id="pagecounter" style="float:right;display:inline;"> </span>
 
 
 </div>
