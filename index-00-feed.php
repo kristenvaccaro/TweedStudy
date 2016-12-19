@@ -17,11 +17,11 @@ echo '<!-- instructions -->
 
         echo '<!-- controls constantly show atm-->
         <div class="col-md-5">
-            <h3><small>Controls are available for this news feed. Please use them for 10-20 seconds to make your ideal feed for a leisurely browsing time (e.g. a Sunday morning drinking coffee).</small></h3>
+            <h3 style="margin-left: 15px;"><small>Controls are available for this news feed. Please use them for 10-20 seconds to make your ideal feed for a leisurely browsing time (e.g. a Sunday morning drinking coffee).</small></h3>
         </div>';
         }else{ echo '<!-- no controls -->
         <div class="col-md-5">
-            <h3><small>This area intentionally left blank.</small></h3>
+            <h3 style="margin-left: 15px;"><small>This area intentionally left blank.</small></h3>
         </div>';
         }
 
