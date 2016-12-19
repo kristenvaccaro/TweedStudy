@@ -106,22 +106,8 @@ include 'src/authorization.php';
 <h1 class="page-header" style="display:inline;">Twitter News Feed Study
 </h1>
 
-<span id="pagecounter" style="float:right;"> </span>
+<span id="pagecounter" style="float:right;display:inline;"> </span>
 
-<!-- <nav style ="display:inline;">
-<ul class="pagination">
-<?php
-    $pages=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-    $index=1;
-    foreach($pages as $value)
-    {
-        echo " <li class='indicator' id='li".$value."' name='li".$value."'><a style='padding: 3px 6px;' onclick='showUI(".$value.",".count($pages).")';>".$index."</a></li>";
-        $index++;
-    }
-    $pages=[];
-    ?>
-</ul>
-</nav> -->
 
 </div>
 </div>
