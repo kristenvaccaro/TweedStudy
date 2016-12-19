@@ -104,10 +104,14 @@ include 'src/authorization.php';
 <div class="row">
 <div class="col-lg-12">
 <h1 class="page-header" style="display:inline;">Twitter News Feed Study
-</h1> <nav style ="display:inline;">
+</h1>
+
+<span id="pagecounter" style="float:right;"> </span>
+
+<!-- <nav style ="display:inline;">
 <ul class="pagination">
 
-<span id="pagecounter"> </span>
+
 
 <!-- <?php
     $pages=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
@@ -120,8 +124,9 @@ include 'src/authorization.php';
     $pages=[];
     ?>
  -->
+
 </ul>
-</nav>
+</nav> -->
 </div>
 </div>
 
@@ -294,7 +299,7 @@ function showUI(_id,_size){
 
     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-    $('#pagecounter').html('<h1>Page ' + _id + ' of 19</h1>')
+    $('#pagecounter').html('<h1>Page <i>' + _id + '</i> of 19</h1>')
 
 //    $.post("src/clear_all.php",_id);
 
