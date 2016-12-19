@@ -5,7 +5,7 @@ echo '<!-- instructions -->
 
     <div class="row">
         <div class="col-md-2">
-            <h3>Instructions</h3>
+            <h3 style="margin-left: 14px;">Instructions</h3>
         </div>
 
         <div class="col-md-5">
