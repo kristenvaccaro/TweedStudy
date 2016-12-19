@@ -7,7 +7,8 @@
 <?php
 
 echo '<!-- Survey -->
-<div id="surveysection header-footer" class="row">
+<div id="header-footer">
+<div id="surveysection" class="row">
     <div class="col-md-5">
         <h3>Instructions</h3>
 
@@ -151,6 +152,7 @@ echo '<!-- Survey -->
 
         </div>
     </div>
+</div>
 </div>';
 
 ?>
