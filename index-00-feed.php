@@ -1,7 +1,7 @@
 
 <?php
 echo '<!-- instructions -->
-<div class="instructions">
+<div class="instructions" id="header-footer">
 
     <div class="row">
         <div class="col-md-2">
