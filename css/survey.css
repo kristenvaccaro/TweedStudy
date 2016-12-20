@@ -16,7 +16,7 @@ form .statement {
 form .likert {
     list-style:none;
     width:100%;
-    margin:0;
+    margin:0 auto;
     padding:0 0 35px;
     display:block;
     border-bottom:2px solid #efefef;
