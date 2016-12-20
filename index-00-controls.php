@@ -58,8 +58,8 @@ echo '<!-- Control Panel -->
         <div id="content">
             <div>
                 <button class="astext alignleft" id="tweet_unpopular" data-count="0">
-            Tweets that havent gotten attention </button> <button class="astext alignright" id="tweet_popular" data-count="0">
-            Popular tweets </button>
+            Less popular tweets</button> <button class="astext alignright" id="tweet_popular" data-count="0">
+            More popular tweets </button>
             </div>
             <input id="popularitySlider-'.$page_id.'" class="slider narrow" type="range" min="0" max="1" value=".501" step=".25">
             <div class="flextainer tick">
