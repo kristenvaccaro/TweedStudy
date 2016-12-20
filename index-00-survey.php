@@ -16,7 +16,7 @@ echo '<!-- Survey -->
     </div>
 
     <div class="col-md-7">
-        <h3>Survey</h3>
+        <h3 style="margin-left:15px;">Survey</h3>
 
         <div class="survey">
             <form action="">
