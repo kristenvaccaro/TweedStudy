@@ -21,7 +21,6 @@ echo '<!-- instructions -->
         </div>';
         }else{ echo '<!-- no controls -->
         <div class="col-md-5">
-            <h3 style="margin-left: 15px;"><small>This area intentionally left blank.</small></h3>
         </div>';
         }
 
@@ -54,6 +53,8 @@ echo '<!--end of the row-->
         else {
 
         echo ' <!-- empty div for spacing on med and larger screens--><div class="col-sm-0 col-md-5 col-md-push-7">
+
+        <h3 style="margin-left: 15px;"><small>This area intentionally left blank.</small></h3>
 
         </div>';
 
