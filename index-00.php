@@ -182,7 +182,7 @@ include 'src/authorization.php';
 
 <div class="container">
 
-Please use the following controls to complete each survey page, clicking the next page number to proceed.
+<h5 style="line-height: 1.5;"> You will experience 18 different interfaces for browsing your Twitter news feed. Please use the buttons below to navigate between interfaces, clicking the next page number to proceed. Please avoid refreshing until you've finished all the surveys.</h5>
 
 <nav>
 <ul class="pagination">
