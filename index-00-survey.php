@@ -12,7 +12,10 @@ echo '<!-- Survey -->
     <div class="col-md-12">
        <!-- <h3 style="margin-left:15px;">Survey</h3> -->
 
-        <h3 style="margin-left:15px;">Based on your experience with this news feed interface, please answer the following questions.</h3>
+        <h3 style="margin-left:15px; line-height: 1.5;">Based on your experience with this news feed interface, please answer the following questions.</h3>
+    </div>
+
+    <div class="col-md-1">
     </div>
 
     <div class="col-md-7">
