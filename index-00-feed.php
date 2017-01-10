@@ -3,7 +3,7 @@
 echo '<!-- instructions -->
 <div class="instructions" id="header-footer">
 
-    <div class="row">
+    <div class="row" style="margin-bottom: 14px;">
         <!-- <div class="col-md-2">
         <h3 style="margin-left: 14px;">Instructions</h3>
         </div> -->
