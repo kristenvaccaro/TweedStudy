@@ -4,12 +4,12 @@ echo '<!-- instructions -->
 <div class="instructions" id="header-footer">
 
     <div class="row">
-        <div class="col-md-2">
-            <h3 style="margin-left: 14px;">Instructions</h3>
-        </div>
+        // <div class="col-md-2">
+        //     <h3 style="margin-left: 14px;">Instructions</h3>
+        // </div>
 
         <div class="col-md-5">
-            <h3><small>Imagine you are browsing this feed on a Sunday morning, while drinking coffee (or a similar leisurely browsing time). Please browse for 30-60 seconds as you would in that situation.</small></h3>
+            <h3>Imagine you are browsing this feed on a Sunday morning, while drinking coffee (or a similar leisurely browsing time). Please browse for 30-60 seconds as you would in that situation.</h3>
         </div>';
 
 
@@ -17,7 +17,7 @@ echo '<!-- instructions -->
 
         echo '<!-- controls constantly show atm-->
         <div class="col-md-5">
-            <h3 style="margin-left: 15px; margin-right: 15px;"><small>Controls are available for this news feed. Please use them for 10-20 seconds to make your ideal feed for a leisurely browsing time (e.g. a Sunday morning drinking coffee).</small></h3>
+            <h3 style="margin-left: 15px; margin-right: 15px;">Controls are available for this news feed. Please use them for 10-20 seconds to make your ideal feed for a leisurely browsing time (e.g. a Sunday morning drinking coffee).</h3>
         </div>';
         }else{ echo '<!-- no controls -->
         <div class="col-md-5">
