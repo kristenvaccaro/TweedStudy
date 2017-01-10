@@ -4,11 +4,11 @@ echo '<!-- instructions -->
 <div class="instructions" id="header-footer">
 
     <div class="row">
-        // <div class="col-md-2">
-        //     <h3 style="margin-left: 14px;">Instructions</h3>
-        // </div>
+        <!-- <div class="col-md-2">
+        <h3 style="margin-left: 14px;">Instructions</h3>
+        </div> -->
 
-        <div class="col-md-5">
+        <div class="col-md-7">
             <h3>Imagine you are browsing this feed on a Sunday morning, while drinking coffee (or a similar leisurely browsing time). Please browse for 30-60 seconds as you would in that situation.</h3>
         </div>';
 
