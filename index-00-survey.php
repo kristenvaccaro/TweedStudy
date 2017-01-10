@@ -122,7 +122,7 @@ echo '<!-- Survey -->
 
 
 
-            <label class="statement">4. I would like to use a control like this in my day-to-day browsing of Twitter</label>
+            <label class="statement">4. I would like to use an interface like this for my day-to-day browsing of my Twitter news feed.</label>
                 <ul class="likert">
                                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-4" value="strong_disagree">
