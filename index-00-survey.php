@@ -10,9 +10,9 @@ echo '<!-- Survey -->
 <div id="header-footer">
 <div id="surveysection" class="row">
     <div class="col-md-12">
-        <h3 style="margin-left:15px;">Survey</h3>
+       <!-- <h3 style="margin-left:15px;">Survey</h3> -->
 
-        <h4 style="margin-left:15px;">Please answer the following questions based on your experience with this news feed.</h4>
+        <h3 style="margin-left:15px;">Based on your experience with this news feed interface, please answer the following questions.</h3>
     </div>
 
     <div class="col-md-7">
