@@ -9,7 +9,7 @@
 echo '<!-- Survey -->
 <div id="header-footer">
 <div id="surveysection" class="row">
-    <div class="col-md-5">
+    <div class="col-md-12">
         <h3 style="margin-left:15px;">Instructions</h3>
 
         <h3 style="margin-left:15px;"><small>Please answer the following questions based on your experience with this news feed.</small></h3>
