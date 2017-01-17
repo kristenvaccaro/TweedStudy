@@ -49,7 +49,7 @@
         </strong>
     </h3>
     <p >
-        In this HIT, you will need to review a graphic design and its goals for at least one minute and provide feedback on the design. Your feedback should include both <strong>strengths </strong>(what you like) and <strong>weaknesses</strong> (what you don’t like) about the <span style='color:blue'>overall concept and the theme </span> of the design. We are not the designer, so you don't need to be overly positive. However, responses that demonstrate insufficient effort or are overly offensive will be rejected.</p>
+        In this HIT, you will need to review several interfaces . Your feedback should include both <strong>strengths </strong>(what you like) and <strong>weaknesses</strong> (what you don’t like) about the <span style='color:blue'>overall concept and the theme </span> of the design. We are not the designer, so you don't need to be overly positive. However, responses that demonstrate insufficient effort or are overly offensive will be rejected.</p>
 
 
 <div id="turker-div" name="turker-div"><strong> Enter your MTurk ID to start :</strong> <input type="text" id="turkerID" name="turkerID"><em style="color:red;"> (required)*</em>
@@ -100,7 +100,7 @@
 
 <p>Please indicate below that you are at least 18 years old, have read and understand this consent form, and you agree to participate in this online research study.</p>
 
-<a href='$url'>I consent </a>";
+<a href="<?php echo $url;?>">I consent </a>
 
 </div>
 
