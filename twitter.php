@@ -121,6 +121,10 @@ console.log('getting into the script at all?');
 
 $('#turkerID').focusout(function(e){
     console.log('getting to the check turker?');
+    if ($('#turkerID').val() != "") {
+            turkID();
+        }
+
     }
 );
 
