@@ -13,6 +13,44 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+<script>
+document.getElementById('turkerID').focusout = function(e){
+    console.log('the script is at least working');
+    if ($('#turkerID').val() != "") {
+        turkID();
+    }
+};
+
+function turkID() {
+
+    $.post( "src/check_turker.php", { turker: $.trim($('#turkerID').val()) })
+    .done(function( data ) {
+
+        switch(data)
+                {
+                  case "exists":
+
+                    $('#survey-part').hide();
+
+                    $('#info').show();
+                    isOkay = false;
+                    provider_ok=0;
+                    //window.location.href ='already_exist.php';
+                    break;
+                   case "success":
+
+                    provider_ok=1;
+                    $('#info').hide();
+                    $('#survey-part').show();
+                    break;
+                  default:
+
+                }
+  });
+
+}
+
+ </script>
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 
 </head>
@@ -106,43 +144,6 @@
 </div>
 </div>
 
-<script>
-document.getElementById('turkerID').focusout = function(e){
-    console.log('the script is at least working');
-    if ($('#turkerID').val() != "") {
-        turkID();
-    }
-};
 
-function turkID() {
-
-    $.post( "src/check_turker.php", { turker: $.trim($('#turkerID').val()) })
-    .done(function( data ) {
-
-        switch(data)
-                {
-                  case "exists":
-
-                    $('#survey-part').hide();
-
-                    $('#info').show();
-                    isOkay = false;
-                    provider_ok=0;
-                    //window.location.href ='already_exist.php';
-                    break;
-                   case "success":
-
-                    provider_ok=1;
-                    $('#info').hide();
-                    $('#survey-part').show();
-                    break;
-                  default:
-
-                }
-  });
-
-}
-
- </script>
 
 </html>
