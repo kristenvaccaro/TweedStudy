@@ -56,10 +56,12 @@
 <p><em style="color:grey">This is for the purpose of payment. </em></p>
 </div>
 
+<div id="info" name="info" style="display:none"><span style='color:red'>You already started this task. If you need to restart, contact the researchers to delete your existing data.</span></div>
+
 </div>
 
 
-<div id="info" name="info" style="display:none"><span style='color:red'>You have already completed the maximum number of HITs allowed in this batch. Multiple submissions will be rejected and impact your approval rate.</span></div>
+
 
 <div id='survey-part' style="display:none">
 
@@ -139,7 +141,6 @@ function turkID() {
                   case "exists":
 
                     $('#survey-part').hide();
-
                     $('#info').show();
                     isOkay = false;
                     provider_ok=0;
@@ -148,6 +149,7 @@ function turkID() {
                    case "success":
 
                     provider_ok=1;
+                    $('#instructions').hide();
                     $('#info').hide();
                     $('#survey-part').show();
                     break;
