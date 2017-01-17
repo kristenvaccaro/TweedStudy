@@ -24,6 +24,6 @@
 
 // mysqli_close($conn);
 
-echo "exists";
+echo "success";
 
 ?>
