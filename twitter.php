@@ -102,10 +102,13 @@
 
 </div>
 
-</div></div></div>
+</div>
+</div>
+</div>
 
 <script>
 document.getElementById('turkerID').focusout = function(e){
+    console.log('the script is at least working');
     if ($('#turkerID').val() != "") {
         turkID();
     }
