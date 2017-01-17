@@ -19,7 +19,10 @@ if($db->connect_errno > 0){
 
 $uid = $_SESSION["user_id"];
 
-$sql = "SELECT user_id FROM `survey_responses_userinfo` WHERE turkerID = {$tid}";
+$sql = "SELECT * FROM `survey_responses_userinfo`";
+
+
+// $sql = "SELECT user_id FROM `survey_responses_userinfo` WHERE turkerID = {$tid}";
 
 if(!$result = $db->query($sql)){
         die('There was an error running the query [' . $db->error . ']');
