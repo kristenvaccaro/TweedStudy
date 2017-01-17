@@ -1,6 +1,6 @@
 <?php
 
-// $tid = $_POST['turker'];
+$tid = $_POST['turker'];
 
 // $_SESSION['turker_id'] =  $tid;
 
@@ -32,6 +32,6 @@
 //         echo "exists";
 //     }
 
-echo "success";
+// echo "success";
 
 ?>
