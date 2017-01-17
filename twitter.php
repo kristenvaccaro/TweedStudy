@@ -111,13 +111,18 @@
 
 console.log('getting into the script at all?');
 //Check TurkID
-document.getElementById('turkerID').focusout = function(e){
-    console.log('getting to the check turker?');
-    if ($('#turkerID').val() != "") {
-        turkID();
-    }
+// document.getElementById('turkerID').focusout = function(e){
+//     console.log('getting to the check turker?');
+//     // if ($('#turkerID').val() != "") {
+//     //     turkID();
+//     // }
 
-};
+// };
+
+$('#turkerID').focusout(function(e){
+    console.log('getting to the check turker?');
+    }
+);
 
 
 function turkID() {
