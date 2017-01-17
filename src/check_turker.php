@@ -24,6 +24,63 @@
 
 // mysqli_close($conn);
 
-echo "success";
+// echo "success";
+
+$tid = $_POST['turker'];
+
+$_SESSION['turker_id'] =  $tid;
+
+$servername = "engr-cpanel-mysql.engr.illinois.edu";
+$username = "twitterf_user";
+$password = "IIA@kT$7maLt";
+$dbname = "twitterf_tweet_store";
+
+$db = new mysqli($servername, $username, $password, $dbname);
+
+if($db->connect_errno > 0){
+    die('Unable to connect to database [' . $db->connect_error . ']');
+}
+
+$uid = $_SESSION["user_id"];
+
+$sql = "SELECT user_id FROM `survey_responses_userinfo` WHERE turkerID = {$tid}";
+
+if(!$result = $db->query($sql)){
+        die('There was an error running the query [' . $db->error . ']');
+}
+
+if($result->num_rows === 0)
+    {
+        echo "success";
+    }
+    else
+    {
+        echo "exists";
+    }
+
+
+
+// $stmt0 =
+
+// $stmt = $db->prepare("INSERT INTO survey_responses_userinfo (user_id, age, gender, location) VALUES (?, ?, ?, ?)");
+
+//     if ( false===$stmt ) {
+//         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
+//     }
+
+//     $stmt->bind_param("isss", $uid, $age, $gender, $location);
+
+//     $rc2 = $stmt->bind_param("isss", $uid, $age, $gender, $location);
+
+//     if ( false===$rc2 ) {
+//         // again execute() is useless if you can't bind the parameters. Bail out somehow.
+//         die('bind_param() failed: ' . htmlspecialchars($stmt->error));
+//     }
+
+//     $stmt->execute();
+//     $stmt->close();
+
+//     $db->close();
+
 
 ?>
