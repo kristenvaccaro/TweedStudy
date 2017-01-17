@@ -14,7 +14,7 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <script>
-document.getElementById('turkerID').focusout = function(e){
+document.ready.getElementById('turkerID').focusout = function(e){
     console.log('the script is at least working');
     if ($('#turkerID').val() != "") {
         turkID();
