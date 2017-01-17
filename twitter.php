@@ -131,7 +131,7 @@ $('#turkerID').focusout(function(e){
 
 function turkID() {
 
-    $.post( "src/check_turker.php", { turker: $.trim($('#turkerID').val()) })
+    $.post( "../src/check_turker.php", { turker: $.trim($('#turkerID').val()) })
     .done(function( data ) {
 
         switch(data)
