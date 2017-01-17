@@ -1,31 +1,5 @@
 <?php
 
-//This is to check whether the submitted TurkerID already existed in database
-// include_once('webpage-utility/db_utility.php');
-// $conn = connect_to_db();
-
-// if($stmt = $conn->prepare('SELECT FeedbackID FROM Feedback WHERE turkerID = ?')){
-
-// 	$stmt->bind_param('s', $_POST['turker']);
-// }
-
-// $stmt->execute();
-// $res = $stmt->get_result();
-
-// if(mysqli_num_rows($res) > 0){
-// 	echo "exists";
-// 	// $result = "exists";
-// }
-// else{
-// 	echo "success";
-// 	// $result = "success";
-// }
-
-
-// mysqli_close($conn);
-
-// echo "success";
-
 $tid = $_POST['turker'];
 
 $_SESSION['turker_id'] =  $tid;
@@ -57,30 +31,5 @@ if($result->num_rows === 0)
     {
         echo "exists";
     }
-
-
-
-// $stmt0 =
-
-// $stmt = $db->prepare("INSERT INTO survey_responses_userinfo (user_id, age, gender, location) VALUES (?, ?, ?, ?)");
-
-//     if ( false===$stmt ) {
-//         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
-//     }
-
-//     $stmt->bind_param("isss", $uid, $age, $gender, $location);
-
-//     $rc2 = $stmt->bind_param("isss", $uid, $age, $gender, $location);
-
-//     if ( false===$rc2 ) {
-//         // again execute() is useless if you can't bind the parameters. Bail out somehow.
-//         die('bind_param() failed: ' . htmlspecialchars($stmt->error));
-//     }
-
-//     $stmt->execute();
-//     $stmt->close();
-
-//     $db->close();
-
 
 ?>
