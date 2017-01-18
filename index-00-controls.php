@@ -72,7 +72,7 @@ echo '<!-- Control Panel -->
 
 echo '<div id="loginWrap">
 
-You have tried <span id="numcontrols">0</span> control settings.
+<span id="numcontrols"></span>
 
 </div>';
 
