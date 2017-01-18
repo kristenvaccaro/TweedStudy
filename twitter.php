@@ -54,6 +54,8 @@
 
 <div id="turker-div" name="turker-div"><strong> Enter your MTurk ID to start :</strong> <input type="text" id="turkerID" name="turkerID"><em style="color:red;"> (required)*</em>
 <p><em style="color:grey">This is for the purpose of payment. </em></p>
+<br>
+<button>Submit</button>
 </div>
 
 <div id="info" name="info" style="display:none"><span style='color:red'>You already started this task. If you need to restart, contact the researchers to delete your existing data.</span></div>
