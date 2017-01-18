@@ -49,7 +49,7 @@
         </strong>
     </h3>
     <p >
-        In this HIT, you will need to review several interfaces . Your feedback should include both <strong>strengths </strong>(what you like) and <strong>weaknesses</strong> (what you don’t like) about the <span style='color:blue'>overall concept and the theme </span> of the design. We are not the designer, so you don't need to be overly positive. However, responses that demonstrate insufficient effort or are overly offensive will be rejected.</p>
+        In this HIT, you will need to review several interfaces showing you versions of your Twitter news feed. It will take 20-30 minutes. You may participate only once.</p>
 
 
 <div id="turker-div" name="turker-div"><strong> Enter your MTurk ID to start :</strong> <input type="text" id="turkerID" name="turkerID"><em style="color:red;"> (required)*</em>
