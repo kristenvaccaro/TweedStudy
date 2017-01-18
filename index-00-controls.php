@@ -72,7 +72,7 @@ echo '<!-- Control Panel -->
 
 echo '<div id="loginWrap">
 
-<span id="numcontrols"></span>
+<span class="numcontrols"></span>
 
 </div>';
 
