@@ -154,6 +154,8 @@ function turkID() {
                     $('#survey-part').show();
                     break;
                   default:
+                    console.log(data);
+
 
                 }
   });
