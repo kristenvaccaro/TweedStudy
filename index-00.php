@@ -284,6 +284,8 @@ function showUI(_id,_size){
 
     $('#pagecounter').html('<h1>Page <i>' + _id + '</i> of 19</h1>')
 
+    $('#numcontrols').html('You have tried 0 control settings.')
+
 //    $.post("src/clear_all.php",_id);
 
 //    $test = $('input[name=likert-'+_id+'-1]:checked');
