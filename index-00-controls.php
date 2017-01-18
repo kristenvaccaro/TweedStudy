@@ -27,7 +27,7 @@ echo '<!-- Control Panel -->
         echo "<b>" . $_SESSION["user"]["screen_name"];
         echo "</b> <img src=" . $_SESSION['user']['profile_image_url'] . " alt='error'>";
 
-        echo '<a href="logout.php"><button class="btn" id="logout">Logout</button></a>
+        echo '<span style="float:right;"><a href="logout.php"><button class="btn" id="logout">Logout</button></a><span>
         </div>
     <!-- <h3> Control Panel </h3> -->
     <!-- <h4> See... </h4> --> ';
