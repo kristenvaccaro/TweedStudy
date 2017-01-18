@@ -18,6 +18,10 @@ window.onload = function () {
 
         var value = $("#"+dataString).val();
 
+        numcontrols = numcontrols + 1;
+
+        $('.numcontrols').html('You have tried ' + numcontrols + ' control settings.');
+
         try {
                     // PAGE THAT WE'RE LEAVING
                     var pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);

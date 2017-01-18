@@ -267,6 +267,7 @@ function showUI(_id,_size){
               unset($_SESSION['value']);
               $_SESSION['button']['tweet_popular'] = false;
               $_SESSION['button']['close_friends'] = false;
+
 ?>
 
     $('.indicator').removeClass('active');
@@ -280,11 +281,13 @@ function showUI(_id,_size){
 
     thispage = _id;
 
+    numcontrols = 0;
+
     $("html, body").animate({ scrollTop: 0 }, "slow");
 
-    $('#pagecounter').html('<h1>Page <i>' + _id + '</i> of 19</h1>')
+    $('#pagecounter').html('<h1>Page <i>' + _id + '</i> of 19</h1>');
 
-    $('.numcontrols').html('You have tried 0 control settings.')
+    $('.numcontrols').html('You have tried 0 control settings.');
 
 //    $.post("src/clear_all.php",_id);
 
