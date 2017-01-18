@@ -21,7 +21,7 @@ if($db->connect_errno > 0){
 
 $uid = $_SESSION["user_id"];
 
-$sql = "SELECT user_id FROM survey_responses_userinfo WHERE turkerID={$tid}";
+$sql = "SELECT user_id FROM survey_responses_userinfo WHERE turkerID='{$tid}'";
 
 // $sql = "SELECT user_id FROM `survey_responses_userinfo`";
 
