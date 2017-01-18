@@ -70,6 +70,11 @@ echo '<!-- Control Panel -->
 
     }
 
+echo '<div id="loginWrap">
+
+<span>You have tried N control settings.</span>
+
+</div>'
 
 
 echo '<!-- end divs -->
