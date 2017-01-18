@@ -74,7 +74,7 @@ echo '<div id="loginWrap">
 
 <span>You have tried N control settings.</span>
 
-</div>'
+</div>';
 
 
 echo '<!-- end divs -->
