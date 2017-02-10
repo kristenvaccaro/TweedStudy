@@ -38,13 +38,14 @@
     $uid = $_SESSION["user_id"];
     $tid = $_SESSION["turker_id"];
 
-    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, code, location) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, code) VALUES (?, ?, ?)");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
     }
 
-    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $location);
+    $stmt->bind_param("iss", $uid, $tid,$location);
+    //$stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $location);
 
     //$rc2 = $stmt->bind_param("isssss", $uid, $tid, $age, $gender,  $completion_code, $location);
 
