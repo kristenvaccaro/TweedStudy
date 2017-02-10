@@ -39,7 +39,7 @@
     $tid = $_SESSION["turker_id"];
     $completion_code = "589e047b6ff1eeek"; //uniqid();
 
-    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location, completion_code) VALUES (?, ?, ?, ?, ?,?)");
+    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location, completion_code) VALUES (?, ?, ?, ?, ?, ?)");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
