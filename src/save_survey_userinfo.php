@@ -37,7 +37,7 @@
 
     $uid = $_SESSION["user_id"];
     $tid = $_SESSION["turker_id"];
-    $completion_code = uniqid();
+    $completion_code = "589e047b6ff1eeek"; //uniqid();
 
     $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location, completion_code) VALUES (?, ?, ?, ?, ?,?)");
 
