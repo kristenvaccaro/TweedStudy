@@ -38,7 +38,7 @@
     $uid = $_SESSION["user_id"];
     $tid = $_SESSION["turker_id"];
 
-    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender,  completion_code, location) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, code, location) VALUES (?, ?, ?, ?, ?, ?)");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
