@@ -44,11 +44,11 @@
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
     }
 
-    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $completion_code, $location);
+    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $comp_code, $location);
 
     //$rc2 = $stmt->bind_param("isssss", $uid, $tid, $age, $gender,  $completion_code, $location);
 
-    $completion_code = "test"; //uniqid();
+    $comp_code = "test"; //uniqid();
 
    /* if ( false===$rc2 ) {
         // again execute() is useless if you can't bind the parameters. Bail out somehow.
