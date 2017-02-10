@@ -39,15 +39,15 @@
     $tid = $_SESSION["turker_id"];
     $completion_code = uniqid();
 
-    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location,completion_code) VALUES (?, ?, ?, ?, ?,?)");
+    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location, completion_code) VALUES (?, ?, ?, ?, ?,?)");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
     }
 
-    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location);
+    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $completion_code);
 
-    $rc2 = $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location);
+    $rc2 = $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $completion_code);
 
     if ( false===$rc2 ) {
         // again execute() is useless if you can't bind the parameters. Bail out somehow.
