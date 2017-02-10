@@ -44,7 +44,7 @@
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
     }
 
-    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $comp_code, $location);
+    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $location);
 
     //$rc2 = $stmt->bind_param("isssss", $uid, $tid, $age, $gender,  $completion_code, $location);
 
