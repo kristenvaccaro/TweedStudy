@@ -38,15 +38,15 @@
         $dataArray['completionCode']='Incomplete';
         if ($num_responses === '18') {
 
-            $stmt = $db->prepare("SELECT completion_code FROM survey_responses_userinfo WHERE turkerID=?");
+            $stmt = $db->prepare("SELECT code FROM survey_responses_userinfo WHERE turkerID=?");
 
             if ( false===$stmt ) {
                 die('prepare() failed: ' . htmlspecialchars($mysqli->error));
             }
 
-            $stmt->bind_param("i", $tid);
+            $stmt->bind_param("s", $tid);
 
-            $rc2 = $stmt->bind_param("i", $tid);
+            $rc2 = $stmt->bind_param("s", $tid);
 
             if ( false===$rc2 ) {
                 // again execute() is useless if you can't bind the parameters. Bail out somehow.
