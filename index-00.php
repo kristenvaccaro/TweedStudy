@@ -278,7 +278,10 @@ function showUI(_id,_size){
     $('#p'+_id).css('display','inline');
     $('#p'+_id + " #surveysection").css('display','none');
 
-    // $('#p'+_id + " #surveysection").delay(3000).fadeIn(100);
+    if ($rrn === 'none'){
+        $('#p'+_id + " #surveysection").delay(3000).fadeIn(100);
+    }
+    //
 
 //
 //    alert([$('input[name=likert-'+$pageleaving+'-1]:checked').val(), $('input[name=likert-'+$pageleaving+'-2]:checked').val(), $('input[name=likert-'+$pageleaving+'-3]:checked').val(), $('input[name=likert-'+$pageleaving+'-4]:checked').val()]);
