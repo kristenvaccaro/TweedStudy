@@ -22,6 +22,12 @@ window.onload = function () {
 
         $('.numcontrols').html('You have tried ' + numcontrols + ' control settings.');
 
+        if (numcontrols > 3) {
+          $('#p'+_id + " #surveysection").css('display','inline');
+        }
+
+         // $('#p'+_id + " #surveysection").delay(3000).fadeIn(100);
+
         try {
                     // PAGE THAT WE'RE LEAVING
                     var pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);
