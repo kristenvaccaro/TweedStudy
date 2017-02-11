@@ -146,7 +146,7 @@ include 'src/authorization.php';
         echo '<!-- /.row -->
         <!-- News Feed + Instructions -->
 
-        <div class="row" id="p'.$page_id.'" style="display:none; margin: 0 0;">
+        <div class="row splitpage" id="p'.$page_id.'" style="display:none; margin: 0 0;">
         ';
 
 //                echo $page_id;
