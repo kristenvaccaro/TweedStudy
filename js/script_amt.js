@@ -22,7 +22,7 @@ window.onload = function () {
 
         $('.numcontrols').html('You have tried ' + numcontrols + ' control settings.');
 
-        if (numcontrols > 3) {
+        if (numcontrols > 5) {
           $('#p'+_id + " #surveysection").css('display','inline');
         }
 
