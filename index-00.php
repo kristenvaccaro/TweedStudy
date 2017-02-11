@@ -276,6 +276,8 @@ function showUI(_id,_size){
         $('#p'+i).css('display','none');
     }
     $('#p'+_id).css('display','inline');
+    $('#p'+_id + " #surveysection").css('display','none');
+
 //
 //    alert([$('input[name=likert-'+$pageleaving+'-1]:checked').val(), $('input[name=likert-'+$pageleaving+'-2]:checked').val(), $('input[name=likert-'+$pageleaving+'-3]:checked').val(), $('input[name=likert-'+$pageleaving+'-4]:checked').val()]);
 
