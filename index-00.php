@@ -278,9 +278,19 @@ function showUI(_id,_size){
     $('#p'+_id).css('display','inline');
     $('#p'+_id + " #surveysection").css('display','none');
 
-    if ($rrn === 'none'){
+
+        try {
+        // REAL RANDOM OR NONE
+        $rrn_new = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/div[contains(@class,"rrn")]/text()').text();
+    }
+    catch(err) {
+        $rrn_new = 'fail';
+    }
+
+    if ($rrn_new === 'none'){
         $('#p'+_id + " #surveysection").delay(3000).fadeIn(100);
     }
+
     //
 
 //
