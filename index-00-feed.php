@@ -9,7 +9,7 @@ echo '<!-- instructions -->
         </div> -->
 
         <div class="col-md-7">
-            <h4 style="margin-left: 14px;  line-height: 1.5;">Imagine you are browsing this feed on a Sunday morning, while drinking coffee (or a similar leisurely browsing time). Please browse for a minimum of 30-60 seconds as you would in that situation.</h4>
+            <h4 style="margin-left: 14px;  line-height: 1.5;">Imagine you are browsing this feed leisurely (e.g. on a Sunday morning while drinking coffee). Please browse for a minimum of 30-60 seconds as you would in that situation.</h4>
         </div>';
 
 
@@ -17,7 +17,7 @@ echo '<!-- instructions -->
 
         echo '<!-- controls constantly show atm-->
         <div class="col-md-5">
-            <h4 style="margin-left: 15px; margin-right: 15px; line-height: 1.5;">Controls are available for this news feed. Please use them to make your ideal feed for a leisurely browsing time (e.g. a Sunday morning drinking coffee). Please try at least 3 control settings.</h4>
+            <h4 style="margin-left: 15px; margin-right: 15px; line-height: 1.5;">Controls are available for this news feed. Please use them to make your ideal feed for leisurely browsing. Please try at least 3 control settings.</h4>
         </div>';
         }else{ echo '<!-- no controls -->
         <div class="col-md-5">
