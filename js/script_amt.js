@@ -22,10 +22,10 @@ window.onload = function () {
 
         $('.numcontrols').html('You have tried ' + numcontrols + ' control settings.');
 
-        if (numcontrols >= 3) {
-          var _id = $(".splitpage:visible").attr("id").slice(1,3);
-          $('#p'+ _id + " #surveysection").css('display','block');
-        }
+        // if (numcontrols >= 3) {
+        //   var _id = $(".splitpage:visible").attr("id").slice(1,3);
+        //   $('#p'+ _id + " #surveysection").css('display','block');
+        // }
 
          // $('#p'+_id + " #surveysection").delay(3000).fadeIn(100);
 

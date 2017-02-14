@@ -287,9 +287,9 @@ function showUI(_id,_size){
         $rrn_new = 'fail';
     }
 
-    if ($rrn_new === 'none'){
-        $('#p'+_id + " #surveysection").delay(3000).fadeIn(100);
-    }
+    // if ($rrn_new === 'none'){
+        $('#p'+_id + " #surveysection").delay(45000).fadeIn(100);
+    // }
 
     //
 
