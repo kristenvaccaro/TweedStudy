@@ -339,7 +339,7 @@ function showUI(_id,_size){
     $.ajax({
            type: "POST",
            url:"src/save_survey.php",
-           data: {page: $pageleaving, controltype: $controltype, realrandnone: $rrn, selected: [$('input[name=likert-'+$pageleaving+'-1]:checked').val(), $('input[name=likert-'+$pageleaving+'-2]:checked').val(), $('input[name=likert-'+$pageleaving+'-3]:checked').val(), $('input[name=likert-'+$pageleaving+'-4]:checked').val()] },
+           data: {page: $pageleaving, controltype: $controltype, realrandnone: $rrn, selected: [$('input[name=likert-'+$pageleaving+'-1]:checked').val(), $('input[name=likert-'+$pageleaving+'-2]:checked').val(), $('input[name=likert-'+$pageleaving+'-3]:checked').val(), $('input[name=likert-'+$pageleaving+'-4]:checked').val(), $('input[name=likert-'+$pageleaving+'-5]:checked').val()] },
            dataType: 'JSON',
            async: true,
            cache: false,
