@@ -198,8 +198,8 @@ echo '<!-- Survey -->
     <option value="">Settings/Tools</option>
     <option value="">----</option>
     <option value="no">No</option>
-    <option value="twitter">Twitter\'s settings/filters</option>
-    <option value="other">External apps/tools</option>
+    <option value="twitter">Twitter\'s settings or filters</option>
+    <option value="other">External apps or tools</option>
     <option value="both">Both Twitter\'s settings & external tools</option>
     </select>
 
