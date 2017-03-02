@@ -193,6 +193,14 @@ echo '<!-- Survey -->
     <option value="AE">Armed Forces Others</option>
     </select>
 
+    <label class="statement">4. Do you use Twitter\'s <a href="https://blog.twitter.com/2016/new-ways-to-control-your-experience-on-twitter">notification settings, quality filter</a> or other apps/tools to control what tweets you see?</label>
+    <select multiple name="filtering" id="filtering">
+    <option value="other">No</option>
+    <option value="twitter-notification-settings">Twitter notification settings</option>
+    <option value="twitter-quality-filter">Twitter quality filter</option>
+    <option value="other">Other apps/tools</option>
+    </select>
+
 
     </form>
 

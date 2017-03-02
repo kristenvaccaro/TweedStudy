@@ -227,10 +227,13 @@ session_start();
                     $e = document.getElementById("state");
                     $location = $e.options[$e.selectedIndex].value;
 
+                    $e = document.getElementById("filtering");
+                    $filtering = $e.options[$e.selectedIndex].value;
+
                                  $.ajax({
                                         type: "POST",
                                         url:"src/save_survey_userinfo.php", //$('input[name=likert-'+$pageleaving+'-1]:checked').val()
-                                        data: {userid: $userid, age: $age, gender: $gender, location: $location},
+                                        data: {userid: $userid, age: $age, gender: $gender, location: $location, filtering: $filtering},
                                         dataType: 'text',
                                         async: true,
                                         cache: false,

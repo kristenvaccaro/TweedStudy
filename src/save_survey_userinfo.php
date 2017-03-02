@@ -19,7 +19,8 @@
 
 	$location = $_POST['location'];
 
-//    echo '<script language="javascript">';
+    $filtering = $_POST['filtering'];
+    //    echo '<script language="javascript">';
 //    echo 'alert(' . (string)$dataArray[0] . ')';
 //    echo '</script>';
 
@@ -38,15 +39,15 @@
     $uid = $_SESSION["user_id"];
     $tid = $_SESSION["turker_id"];
 
-    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location, code) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $db->prepare("REPLACE INTO survey_responses_userinfo (user_id, turkerID, age, gender, location, filtering, code) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
     if ( false===$stmt ) {
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
     }
 
-    $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $completion_code);
+    $stmt->bind_param("issssss", $uid, $tid, $age, $gender, $location, $filtering, $completion_code);
 
-    $rc2 = $stmt->bind_param("isssss", $uid, $tid, $age, $gender, $location, $completion_code);
+    $rc2 = $stmt->bind_param("issssss", $uid, $tid, $age, $gender, $location, $filtering, $completion_code);
     $completion_code = uniqid();
 
     if ( false===$rc2 ) {
