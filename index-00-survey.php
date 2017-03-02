@@ -88,8 +88,39 @@ echo '<!-- Survey -->
 
                 </ul>
 
+            <label class="statement">3. For verification purposes, please select XYZ</label>
+                <ul class="likert">
+                                <li>
+                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="strong_disagree">
+                <label>Strongly disagree</label>
+                </li>
 
-            <label class="statement">3. I feel in control of my news feed</label>
+                <li>
+                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="disagree">
+                <label>Disagree</label>
+                </li>
+
+
+                <li>
+                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="neutral">
+                <label>Neutral</label>
+                </li>
+
+
+                 <li>
+                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="agree">
+                <label>Agree</label>
+                </li>
+
+                <li>
+                <input type="radio" name="likert-'; echo $page_id; echo '-3" value="strong_agree">
+                <label>Strongly agree</label>
+                </li>
+
+                </ul>
+
+
+            <label class="statement">4. I feel in control of my news feed</label>
                 <ul class="likert">
                                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-3" value="strong_disagree">
@@ -122,7 +153,7 @@ echo '<!-- Survey -->
 
 
 
-            <label class="statement">4. I would like to use an interface like this for my day-to-day browsing of my Twitter news feed.</label>
+            <label class="statement">5. I would like to use an interface like this for my day-to-day browsing of my Twitter news feed.</label>
                 <ul class="likert">
                                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-4" value="strong_disagree">
