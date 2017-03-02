@@ -116,6 +116,25 @@ include 'src/authorization.php';
 
 <?php
 
+    $verificationTask = [1 => "Strongly agree",
+                        2=> "Neutral",
+                        3=> "Strongly disagree",
+                        4=> "Disagree",
+                        5=> "Neutral",
+                        6=> "Agree",
+                        7=> "Strongly agree",
+                        8=> "Strongly disagree",
+                        9=> "Disagree",
+                        10=> "Agree",
+                        11=> "Neutral",
+                        12=>"Strongly agree",
+                        13=> "Agree",
+                        14=> "Strongly disagree",
+                        15=>"Strongly agree",
+                        16=> "Agree",
+                        17=> "Disagree",
+                        18=>"Neutral",];
+
 
     $outerArray = array("closeness", "closeness", "closeness", "popularity","popularity","popularity");
     $innerArray = array("real","random","none");
