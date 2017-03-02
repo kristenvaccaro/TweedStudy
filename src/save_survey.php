@@ -45,9 +45,9 @@
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
     }
 
-    $stmt->bind_param("sssssssssssssss", $user_id, $page, $controltype, $rrn, $q1,$q2,$q3,$q4,$q5,$controltype, $rrn, $q1,$q2,$q3,$q4,$q5);
+    $stmt->bind_param("ssssssssssssssss", $user_id, $page, $controltype, $rrn, $q1,$q2,$q3,$q4,$q5,$controltype, $rrn, $q1,$q2,$q3,$q4,$q5);
 
-    $rc2 = $stmt->bind_param("sssssssssssssss",  $user_id, $page, $controltype, $rrn, $q1,$q2,$q3,$q4,$q5,$controltype, $rrn, $q1,$q2,$q3,$q4,$q5);
+    $rc2 = $stmt->bind_param("ssssssssssssssss",  $user_id, $page, $controltype, $rrn, $q1,$q2,$q3,$q4,$q5,$controltype, $rrn, $q1,$q2,$q3,$q4,$q5);
 
     if ( false===$rc2 ) {
         // again execute() is useless if you can't bind the parameters. Bail out somehow.
