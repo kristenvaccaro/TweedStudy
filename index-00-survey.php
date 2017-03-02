@@ -88,7 +88,7 @@ echo '<!-- Survey -->
 
                 </ul>
 
-            <label class="statement">3. For verification purposes, please select '; echo $verificationTask[$page_id]; echo'</label>
+            <label class="statement">3. For verification purposes, please select "'; echo $verificationTask[$page_id]; echo'"</label>
                 <ul class="likert">
                                 <li>
                 <input type="radio" name="likert-'; echo $page_id; echo '-3" value="strong_disagree">
