@@ -353,7 +353,7 @@ function showUI(_id,_size){
                         }
                     });
                     console.log(tlen);
-                    if (tlen === 4) {
+                    if (tlen === 5) {
                         console.log('successfully saved survey response');
                         $('#li'+$pageleaving+' a').css('background-color','#08BF67');
                     }
