@@ -266,13 +266,13 @@ function showUI(_id,_size){
 
     try {
         // PAGE THAT WE'RE LEAVING
-        $pageleaving = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/@id').val().slice(1);
+        $pageleaving = $(document).xpathEvaluate('//div[contains(@class,"currentPage")]/@id').val().slice(1);
 
         // CONTROL TYPE
-        $controltype = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/div[contains(@class,"controltype")]/text()').text();
+        $controltype = $(document).xpathEvaluate('//div[contains(@class,"currentPage")]/div[contains(@class,"controltype")]/text()').text();
 
         // REAL RANDOM OR NONE
-        $rrn = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/div[contains(@class,"rrn")]/text()').text();
+        $rrn = $(document).xpathEvaluate('//div[contains(@class,"currentPage")]/div[contains(@class,"rrn")]/text()').text();
         }
     catch(err) {
         $pageleaving = '0';
