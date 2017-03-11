@@ -273,7 +273,7 @@ function showUI(_id,_size){
 
         // REAL RANDOM OR NONE
         $rrn = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/div[contains(@class,"rrn")]/text()').text();
-    }
+        }
     catch(err) {
         $pageleaving = '0';
         $controltype = 'fail';
@@ -293,18 +293,22 @@ function showUI(_id,_size){
     $('#li'+_id).addClass('active');
     for (i = 1; i < _size + 1; i++) {
         $('#p'+i).css('display','none');
+        if ($('#p'+i).hasClass('currentPage')) {
+            $('#p'+i).removeClass("currentPage");
+        }
     }
+    $('#p'+_id).addClass("currentPage");
     $('#p'+_id).css('display','inline');
     $('#p'+_id + " #surveysection").css('display','none');
 
 
-        try {
-        // REAL RANDOM OR NONE
-        $rrn_new = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/div[contains(@class,"rrn")]/text()').text();
-    }
-    catch(err) {
-        $rrn_new = 'fail';
-    }
+    //     try {
+    //     // REAL RANDOM OR NONE
+    //     $rrn_new = $(document).xpathEvaluate('//div[contains(@style,"display: inline")]/div[contains(@class,"rrn")]/text()').text();
+    // }
+    // catch(err) {
+    //     $rrn_new = 'fail';
+    // }
 
     // if ($rrn_new === 'none'){
         $('#p'+_id + " #surveysection").delay(45000).fadeIn(100);
