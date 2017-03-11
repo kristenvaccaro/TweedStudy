@@ -201,7 +201,7 @@ session_start();
                                         url:"src/save_survey_userinfo.php", //$('input[name=likert-'+$pageleaving+'-1]:checked').val()
                                         data: {userid: $userid, age: $age, gender: $gender, location: $location, filtering: $filtering},
                                         dataType: 'text',
-                                        async: false,
+                                        async: true,
                                         cache: false,
                                         success: function(response) {
                                           console.log('successfully saved demographic info');
