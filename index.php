@@ -208,7 +208,7 @@ session_start();
                                           var randomNumber = Math.floor((Math.random() * 3) + 1);
                                           var indexLocation = "/TweedStudy/index-00.php";
                                           var hostname = window.location.hostname;
-                                          var url = "http://"+hostname + indexLocation
+                                          var url = "http://"+hostname + indexLocation;
                                           window.location.href=url;
                                         },
                                         error:function(exception){console.log(exception);}
