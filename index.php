@@ -11,6 +11,10 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
  <link rel="stylesheet" type="text/css" href="css/survey.css">
 		<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
 	</head>
   <body>
 
@@ -205,15 +209,15 @@ session_start();
                                         cache: false,
                                         success: function(response) {
                                           console.log('successfully saved demographic info');
-                                                              var randomNumber = Math.floor((Math.random() * 3) + 1);
-                      var indexLocation = "/TweedStudy/index-00.php";
-                    var hostname = window.location.hostname;
-                    var url = "http://"+hostname + indexLocation;
-                    window.location.href=url;
+                                          var randomNumber = Math.floor((Math.random() * 3) + 1);
+                                          var indexLocation = "/TweedStudy/index-00.php";
+                                          var hostname = window.location.hostname;
+                                          var url = "http://"+hostname + indexLocation;
+                                          window.location.href=url;
 
                                         },
                                         error:function(exception){console.log(exception);
-                                              $(document).getElementById("surveySection").html("<p><a href='twitterfeed.web.engr.illinois.edu/TweedStudy/twitter.php'>There was an error while saving your data. Please return to the start page (by clicking on this text) to try again</a><p>");
+                                              document.getElementById("surveysection").html("<p><a href='twitterfeed.web.engr.illinois.edu/TweedStudy/twitter.php'>There was an error while saving your data. Please return to the start page (by clicking on this text) to try again</a><p>");
 
                                         }
 
