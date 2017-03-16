@@ -11,10 +11,6 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
  <link rel="stylesheet" type="text/css" href="css/survey.css">
 		<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-  crossorigin="anonymous"></script>
 	</head>
   <body>
 
@@ -216,8 +212,9 @@ session_start();
                                           window.location.href=url;
 
                                         },
-                                        error:function(exception){console.log(exception);
-                                              document.getElementById("surveysection").html("<p><a href='twitterfeed.web.engr.illinois.edu/TweedStudy/twitter.php'>There was an error while saving your data. Please return to the start page (by clicking on this text) to try again</a><p>");
+                                        error:function(exception){
+                                              console.log(exception);
+                                              $(document.getElementById("surveysection")).html("<h2><a href='http://twitterfeed.web.engr.illinois.edu/TweedStudy/twitter.php'>There was an error while saving your data. Please return to the start page (by clicking on this text) to try again</a></h2>");
 
                                         }
 
