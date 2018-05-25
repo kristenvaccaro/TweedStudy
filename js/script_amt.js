@@ -6,6 +6,12 @@
 
 
 window.onload = function () {
+
+  $(window).scroll(function(){
+    if($(window).scrollTop() < 2440){
+      $(".controls").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+    }
+  });
     $(".slider").on('change', function( event ) {
 
          //This is for Internet Explorer
