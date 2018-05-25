@@ -26,7 +26,8 @@
 
     if ((!isset($_SESSION['oauth_access_token'])) || ($_SESSION['oauth_access_token'])=='') {
         $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_request_token'], $_SESSION['oauth_request_token_secret']);
-                               echo $_SESSION['oauth_request_token'];
+                               echo "testing testing testing ";
+                               $_SESSION['oauth_request_token'];
                                echo "<br>";
                                echo $_REQUEST['oauth_verifier'];
                                echo "<br>";
