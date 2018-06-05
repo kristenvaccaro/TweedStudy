@@ -1,6 +1,6 @@
 <?php
     function saveToSQL($connection,$max_id) {
-        $servername = "engr-cpanel3-mysql.engr.illinois.edu";
+        $servername = "engr-cpanel-mysql.engr.illinois.edu";
         $username = "twitterf_user";
         $password = "IIA@kT$7maLt";
         $dbname = "twitterf_tweet_store";
