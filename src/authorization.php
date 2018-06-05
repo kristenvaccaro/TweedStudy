@@ -25,15 +25,15 @@
     define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/index.php');
 
     if ((!isset($_SESSION['oauth_access_token'])) || ($_SESSION['oauth_access_token'])=='') {
-        $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_request_token'], $_SESSION['oauth_request_token_secret']);
-                               echo "testing testing testing ";
+        $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+        $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
+        echo "testing testing testing ";
                                echo CONSUMER_KEY;
                                echo CONSUMER_SECRET;
-                               echo $_REQUEST['oauth_verifier'];
+                               echo $request_token;
                                echo "<br>";
-        $access_token = $connection->oauth("oauth/access_token", array("oauth_verifier" => $_REQUEST['oauth_verifier']));
-        $_SESSION['oauth_access_token'] = $access_token['oauth_token'];
-        $_SESSION['oauth_access_token_secret'] = $access_token['oauth_token_secret'];
+        $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
+        $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
     } else {
         //                        echo $_SESSION['oauth_access_token'];
         //                        echo "<br>";
