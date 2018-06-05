@@ -1,5 +1,6 @@
 <?php
 session_start();
+header('Access-Control-Allow-Origin: *');
 // print_r($_SESSION);
 ?>
 <!DOCTYPE html>
