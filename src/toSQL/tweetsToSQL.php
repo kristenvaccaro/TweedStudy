@@ -67,6 +67,7 @@
             }
 
 
+            var_dump($tweet);
         // Set $tweet_id
             $tweet_id = $tweet['id'];
         // Initalize user parameters
@@ -203,11 +204,11 @@ if(!function_exists('endsWith')){
         }
 
         $stmt_data->close();
-        
+
         //sentiment, popularity, poster_frequency
-        
-       
-        
-        
+
+
+
+
     }
     ?>
