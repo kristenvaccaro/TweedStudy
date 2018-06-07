@@ -25,7 +25,7 @@
 
 		define('CONSUMER_KEY', 'HDhjz43hHgbl6B7fEVy3wHApk');
         define('CONSUMER_SECRET', '9xaTyEdOWSs8O9JCdHUjnYpZCoTj1pn75y7FmAS4o8EzH83LPu');
-		define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/');
+		define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/index.php');
 
 		session_start();
 
