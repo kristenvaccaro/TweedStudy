@@ -3,9 +3,9 @@
     ini_set('display_errors', 1);
     //					require_once('TwitterAPIExchange.php');
 
-    // $path_parts = pathinfo('authorization.php');
-    // echo $path_parts['dirname']."<br>";
-    // require_once $path_parts['dirname']."/TwitterOAuth/autoload.php";
+    $path_parts = pathinfo('authorization.php');
+    echo $path_parts['dirname']."<br>";
+    require_once $path_parts['dirname']."/TwitterOAuth/autoload.php";
     //
     //
     // echo dirname("authorization.php");
@@ -18,7 +18,7 @@
     // require "vendor/autoload.php";
 
 
-    // use Abraham\TwitterOAuth\TwitterOAuth;
+    use Abraham\TwitterOAuth\TwitterOAuth;
 
     //echo "Require successful with directory: ".$path_parts['dirname']."/TwitterOAuth/autoload.php <br>";
 
@@ -37,6 +37,7 @@
                                echo "<br> end of request token printing <br>";
         $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
         $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
+        unset($GLOBALS['connection']);
     } else {
         //                        echo $_SESSION['oauth_access_token'];
         //                        echo "<br>";
