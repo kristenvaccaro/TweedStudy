@@ -27,12 +27,13 @@
     define('CONSUMER_SECRET', 'oQTh80UzN2NHDI6HRN9FvgIjnlnuHwEQOvWAxtWSi0H6Dau576');
     define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/index.php');
 
+    echo "are we getting here 1?";
     $request_token = [];
     $request_token['oauth_token'] = $_SESSION['oauth_token'];
     $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
 
     if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
-     echo "Abort! something's gone very wrong!"!
+     echo "Abort! something's gone very wrong!";
     }
 
 
@@ -62,6 +63,7 @@
 
     // unset($connection);
 
+    echo "<br>are we getting to first connection?<br>";
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
     $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
     $_SESSION['access_token'] = $access_token;
