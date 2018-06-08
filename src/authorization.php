@@ -78,8 +78,8 @@
             echo "<br>testing testing testing 4<br>";
     var_dump($fulluser);
     echo "<br> end of auth printing<br>";
-    $user = $fulluser->"screen_name";
-    $user_id= $fulluser->"id";
+    $user = $fulluser["screen_name"];
+    $user_id= $fulluser["id"];
     $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
     $_SESSION["user"] = $user; // Session variable that holds the user array.
 
