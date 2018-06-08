@@ -16,6 +16,8 @@
     // require("../../TwitterOAuth/autoload.php");
     // require "/TwitterOAuth/autoload.php";
     // require "vendor/autoload.php";
+
+
     use Abraham\TwitterOAuth\TwitterOAuth;
 
     //echo "Require successful with directory: ".$path_parts['dirname']."/TwitterOAuth/autoload.php <br>";
@@ -35,6 +37,7 @@
                                echo "<br> end of request token printing <br>";
         $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
         $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
+        unset($connection);
     } else {
         //                        echo $_SESSION['oauth_access_token'];
         //                        echo "<br>";
