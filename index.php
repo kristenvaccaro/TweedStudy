@@ -107,11 +107,11 @@ header('Access-Control-Allow-Origin: *');
                           updateDataSQL();
 
 //                          echo "Saving trends now <br>";
-                          saveTrendsToSQL($connection);
+                          // saveTrendsToSQL($connection);
 //                          echo "Saving DMs now <br>";
-                          savedirectMessagesToSQL($connection);
+                          // savedirectMessagesToSQL($connection);
 //                          echo "Saving mentions now <br>";
-                          mentionsToSQL($connection);
+                          // mentionsToSQL($connection);
 
 //                          echo "Direct messages saved, now paging through friends. <br>";
                           $_SESSION["rank_counter"] = 0;
@@ -129,7 +129,7 @@ header('Access-Control-Allow-Origin: *');
                           unset($_SESSION["rank_counter"]);
 
 //                          echo "Computing and saving computed friend rank";
-                          computeFriendRank();
+                          // computeFriendRank();
 
 
 												// saveToSQL($connection, $user, $last_max_id);

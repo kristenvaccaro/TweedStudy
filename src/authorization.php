@@ -73,11 +73,15 @@
     echo "<br> end of access token printing <br>";
 
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    $user = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
+    $fulluser = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
 
             echo "<br>testing testing testing 4<br>";
-    var_dump($user);
+    var_dump($fulluser);
     echo "<br> end of auth printing<br>";
+    $user = $fulluser["screen_name"];
+    $user_id= $fulluser["id"];
+    $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
+    $_SESSION["user"] = $user; // Session variable that holds the user array.
 
 
     // echo "<br> well are we getting here????<br>";
@@ -124,13 +128,13 @@
     //					$jsonTweets = $twitter->buildOauth($url, $requestMethod)
     //								->performRequest();
 
-    //$jsonTweets = $connection->get("statuses/home_timeline", array("count" => 200, "include_entities" => true));
+    // $jsonTweets = $connection->get("statuses/home_timeline", array("count" => 200, "include_entities" => true));
 
 
-    //                    $jsonTweets = getData($connection);
+    // //                    $jsonTweets = getData($connection);
 
-    /** Process the response (JSON format) using json_decode: http://docs.php.net/json_decode **/
-    $response = json_decode($jsonTweets,true);
+    // /** Process the response (JSON format) using json_decode: http://docs.php.net/json_decode **/
+    // $response = json_decode($jsonTweets,true);
 
     /** Go through every tweet and print out line by line -- will ideally need some pleasant wrapping with bootstrap -- maybe add IDs to process instead
      Example of the kind of information that can be returned here: https://dev.twitter.com/rest/reference/get/statuses/home_timeline **/
