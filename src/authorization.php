@@ -73,11 +73,12 @@
     echo "<br> end of access token printing <br>";
 
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    $fulluser = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
+    $fulluserdata = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
 
             echo "<br>testing testing testing 4<br>";
-    var_dump($fulluser);
+    var_dump($fulluserdata);
     echo "<br> end of auth printing<br>";
+    $fulluser=json_decode($fulluserdata,true);
     $user = $fulluser["screen_name"];
     $user_id= $fulluser["id"];
     $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
@@ -134,7 +135,7 @@
     // //                    $jsonTweets = getData($connection);
 
     // /** Process the response (JSON format) using json_decode: http://docs.php.net/json_decode **/
-    $response = json_decode($jsonTweets,true);
+    // $response = json_decode($jsonTweets,true);
 
     /** Go through every tweet and print out line by line -- will ideally need some pleasant wrapping with bootstrap -- maybe add IDs to process instead
      Example of the kind of information that can be returned here: https://dev.twitter.com/rest/reference/get/statuses/home_timeline **/
