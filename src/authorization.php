@@ -30,8 +30,9 @@
         echo "testing testing testing ";
                                echo CONSUMER_KEY;
                                echo CONSUMER_SECRET;
+                               echo "<br>testing testing testing 2<br>";
                                echo $request_token;
-                               echo "<br>";
+                               echo "<br> end of request token printing <br>";
         $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
         $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
     } else {
