@@ -38,6 +38,7 @@
         $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
         $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
         unset($GLOBALS['connection']);
+        unset($GLOBALS['request_token']);
     } else {
         //                        echo $_SESSION['oauth_access_token'];
         //                        echo "<br>";
@@ -54,6 +55,7 @@
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
     echo "<br> almost positive not getting here<br>";
     $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
+    echo "<br> actually apparently doing better than I thought <br>";
     $_SESSION['access_token'] = $access_token;
 
     echo "<br>testing testing testing 3<br>";
