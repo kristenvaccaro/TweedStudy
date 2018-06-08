@@ -5,7 +5,7 @@
 
     $path_parts = pathinfo('authorization.php');
     echo $path_parts['dirname']."<br>";
-    require $path_parts['dirname']."/TwitterOAuth/autoload.php";
+    require_once $path_parts['dirname']."/TwitterOAuth/autoload.php";
     //
     //
     // echo dirname("authorization.php");
