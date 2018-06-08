@@ -38,13 +38,13 @@ class Util
      * parameters like this
      * array('a' => array('b','c'), 'd' => 'e')
      *
-     * @param string $input
+     * @param mixed $input
      *
      * @return array
      */
     public static function parseParameters($input)
     {
-        if (!is_string($input)) {
+        if (!isset($input) || !$input) {
             return [];
         }
 
@@ -75,13 +75,13 @@ class Util
     }
 
     /**
-     * @param array $params
+     * @param $params
      *
      * @return string
      */
-    public static function buildHttpQuery(array $params)
+    public static function buildHttpQuery($params)
     {
-        if (empty($params)) {
+        if (!$params) {
             return '';
         }
 
