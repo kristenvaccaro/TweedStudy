@@ -78,7 +78,6 @@
             echo "<br>testing testing testing 4<br>";
     var_dump($fulluser);
     echo "<br> end of auth printing<br>";
-    // $fulluser=json_decode($fulluserdata,true);
     $user = $fulluser->"screen_name";
     $user_id= $fulluser->"id";
     $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
