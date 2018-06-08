@@ -1,4 +1,5 @@
 <?php
+    session_start();
     // Authorization
     ini_set('display_errors', 1);
     //					require_once('TwitterAPIExchange.php');
@@ -26,23 +27,33 @@
     define('CONSUMER_SECRET', 'oQTh80UzN2NHDI6HRN9FvgIjnlnuHwEQOvWAxtWSi0H6Dau576');
     define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/index.php');
 
-    if ((!isset($_SESSION['oauth_access_token'])) || ($_SESSION['oauth_access_token'])=='') {
-        $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
-        $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
-        echo "testing testing testing ";
-                               echo CONSUMER_KEY;
-                               echo CONSUMER_SECRET;
-                               echo "<br>testing testing testing 2<br>";
-                               var_dump($request_token);
-                               echo "<br> end of request token printing <br>";
-        $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
-        $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
-        unset($GLOBALS['connection']);
-        unset($GLOBALS['request_token']);
-    } else {
-        //                        echo $_SESSION['oauth_access_token'];
-        //                        echo "<br>";
+    $request_token = [];
+    $request_token['oauth_token'] = $_SESSION['oauth_token'];
+    $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
+
+    if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
+     echo "Abort! something's gone very wrong!"!
     }
+
+
+
+    // if ((!isset($_SESSION['oauth_access_token'])) || ($_SESSION['oauth_access_token'])=='') {
+    //     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+    //     $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
+    //     echo "testing testing testing ";
+    //                            echo CONSUMER_KEY;
+    //                            echo CONSUMER_SECRET;
+    //                            echo "<br>testing testing testing 2<br>";
+    //                            var_dump($request_token);
+    //                            echo "<br> end of request token printing <br>";
+    //     $_SESSION['oauth_access_token'] = $request_token['oauth_token'];
+    //     $_SESSION['oauth_access_token_secret'] = $request_token['oauth_token_secret'];
+    //     unset($GLOBALS['connection']);
+    //     unset($GLOBALS['request_token']);
+    // } else {
+    //     //                        echo $_SESSION['oauth_access_token'];
+    //     //                        echo "<br>";
+    // }
 
 
     //                    $request_token = [];
@@ -51,16 +62,32 @@
 
     // unset($connection);
 
-    echo "<br> well are we getting here????<br>";
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
-    echo "<br> almost positive not getting here<br>";
+    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
     $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
-    echo "<br> actually apparently doing better than I thought <br>";
     $_SESSION['access_token'] = $access_token;
 
-    echo "<br>testing testing testing 3<br>";
+        echo "<br>testing testing testing 3<br>";
     var_dump($access_token);
     echo "<br> end of access token printing <br>";
+
+    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
+    $user = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
+
+            echo "<br>testing testing testing 4<br>";
+    var_dump($user);
+    echo "<br> end of auth printing<br>";
+
+
+    // echo "<br> well are we getting here????<br>";
+    // $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
+    // echo "<br> almost positive not getting here<br>";
+    // $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
+    // echo "<br> actually apparently doing better than I thought <br>";
+    // $_SESSION['access_token'] = $access_token;
+
+    // echo "<br>testing testing testing 3<br>";
+    // var_dump($access_token);
+    // echo "<br> end of access token printing <br>";
 
 // Create $user variable from connection and store $user["id"] as session variable
     // $user = $connection->get("account/verify_credentials");

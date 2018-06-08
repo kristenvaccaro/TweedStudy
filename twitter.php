@@ -27,7 +27,7 @@
         define('CONSUMER_SECRET', 'oQTh80UzN2NHDI6HRN9FvgIjnlnuHwEQOvWAxtWSi0H6Dau576');
 		define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/index.php');
 
-		session_start();
+		// session_start();
 
         unset($_SESSION['oauth_access_token']);
         unset($_SESSION['oauth_access_token_secret']);
