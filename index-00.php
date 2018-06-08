@@ -10,19 +10,19 @@
 
     // Importing all functions
 
-    include 'src/saveToSQL.php';
+    // include 'src/saveToSQL.php';
 
-    // also be able to update with our "fake" features
+    // // also be able to update with our "fake" features
 
-    include 'src/toSQL/updateDataSQL.php';
+    // include 'src/toSQL/updateDataSQL.php';
 
-    // Save current user's tweets to SQL database
+    // // Save current user's tweets to SQL database
 
-    include 'src/saveTrendsToSQL.php';
+    // include 'src/saveTrendsToSQL.php';
 
     // Save trends for current user to DB
 
-    include 'src/getData.php';
+    // include 'src/getData.php';
 
     // Fetch data and put it into cache
 
@@ -34,15 +34,15 @@
 
     // Printing all tweets
 
-    include 'src/saveFriendsToSQL.php';
+    // include 'src/saveFriendsToSQL.php';
 
-    // Save friends
+    // // Save friends
 
-    include 'src/computeFriendRank.php';
+    // include 'src/computeFriendRank.php';
 
-    // As a second step, compute friend rank (need max friend num to do so)
+    // // As a second step, compute friend rank (need max friend num to do so)
 
-    include 'src/savedirectMessagesToSQL.php';
+    // include 'src/savedirectMessagesToSQL.php';
 
 
 
@@ -63,7 +63,7 @@ function controlPanel()
 
 // Authorization
 
-include 'src/authorization.php';
+// include 'src/authorization.php';
 
 
 ?>

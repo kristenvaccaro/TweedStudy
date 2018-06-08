@@ -4,7 +4,7 @@
 	function printTweets_SQL(){
 
 	//SQL Authorization
-	    $servername = "engr-cpanel-mysql.engr.illinois.edu";
+	    $servername = "localhost";
 	    $username = "twitterf_user";
 	    $password = "IIA@kT$7maLt";
 	    $dbname = "twitterf_tweet_store";
