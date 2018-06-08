@@ -134,7 +134,7 @@
     // //                    $jsonTweets = getData($connection);
 
     // /** Process the response (JSON format) using json_decode: http://docs.php.net/json_decode **/
-    // $response = json_decode($jsonTweets,true);
+    $response = json_decode($jsonTweets,true);
 
     /** Go through every tweet and print out line by line -- will ideally need some pleasant wrapping with bootstrap -- maybe add IDs to process instead
      Example of the kind of information that can be returned here: https://dev.twitter.com/rest/reference/get/statuses/home_timeline **/
