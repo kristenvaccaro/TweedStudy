@@ -73,14 +73,14 @@
     echo "<br> end of access token printing <br>";
 
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    $fulluserdata = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
+    $fulluser = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
 
             echo "<br>testing testing testing 4<br>";
-    var_dump($fulluserdata);
+    var_dump($fulluser);
     echo "<br> end of auth printing<br>";
-    $fulluser=json_decode($fulluserdata,true);
-    $user = $fulluser["screen_name"];
-    $user_id= $fulluser["id"];
+    // $fulluser=json_decode($fulluserdata,true);
+    $user = $fulluser->"screen_name";
+    $user_id= $fulluser->"id";
     $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
     $_SESSION["user"] = $user; // Session variable that holds the user array.
 
