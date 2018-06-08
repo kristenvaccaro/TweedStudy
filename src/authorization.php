@@ -47,12 +47,20 @@
 
 
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
+    $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
+    $_SESSION['access_token'] = $access_token;
+
+    echo "<br>testing testing testing 3<br>";
+    var_dump($access_token);
+    echo "<br> end of access token printing <br>";
+
 // Create $user variable from connection and store $user["id"] as session variable
-    $user = $connection->get("account/verify_credentials");
-    $user = json_decode(json_encode($user),true);
-    $user_id = $user["id"];
-    $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
-    $_SESSION["user"] = $user; // Session variable that holds the user array.
+    // $user = $connection->get("account/verify_credentials");
+    // $user = json_decode(json_encode($user),true);
+    // $user = $access_token["screen_name"];
+    // $user_id = $user["id"];
+    // $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
+    // $_SESSION["user"] = $user; // Session variable that holds the user array.
 
     //                    echo $_SESSION['oauth_access_token'];
     //                    echo "<br>";
