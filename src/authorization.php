@@ -63,26 +63,26 @@
 
     // unset($connection);
 
-    echo "<br>are we getting to first connection?<br>";
+    // echo "<br>are we getting to first connection?<br>";
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
     $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
     $_SESSION['access_token'] = $access_token;
 
-        echo "<br>testing testing testing 3<br>";
-    var_dump($access_token);
-    echo "<br> end of access token printing <br>";
+    //     echo "<br>testing testing testing 3<br>";
+    // var_dump($access_token);
+    // echo "<br> end of access token printing <br>";
 
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
     $fulluser = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
 
-            echo "<br>testing testing testing 4<br>";
-    var_dump($fulluser);
-    echo "<br> end of auth printing<br>";
+            // echo "<br>testing testing testing 4<br>";
+    // var_dump($fulluser);
+
     $user = $fulluser->screen_name;
     $user_id= $fulluser->id;
     $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
     $_SESSION["user"] = $user; // Session variable that holds the user array.
-
+    echo "<br> end of auth printing<br>";
 
     // echo "<br> well are we getting here????<br>";
     // $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
