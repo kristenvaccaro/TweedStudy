@@ -20,8 +20,8 @@
 
     //echo "Require successful with directory: ".$path_parts['dirname']."/TwitterOAuth/autoload.php <br>";
 
-    define('CONSUMER_KEY', 'HDhjz43hHgbl6B7fEVy3wHApk');
-    define('CONSUMER_SECRET', '9xaTyEdOWSs8O9JCdHUjnYpZCoTj1pn75y7FmAS4o8EzH83LPu');
+    define('CONSUMER_KEY', 'jcWtxniXFDXc1JzUcDphKcM50');
+    define('CONSUMER_SECRET', 'oQTh80UzN2NHDI6HRN9FvgIjnlnuHwEQOvWAxtWSi0H6Dau576');
     define('OAUTH_CALLBACK', 'http://twitterfeed.web.engr.illinois.edu/TweedStudy/index.php');
 
     if ((!isset($_SESSION['oauth_access_token'])) || ($_SESSION['oauth_access_token'])=='') {
