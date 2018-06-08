@@ -29,8 +29,8 @@
 
     echo "are we getting here 1?";
     $request_token = [];
-    $request_token['oauth_token'] = $_SESSION['oauth_token'];
-    $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
+    $request_token['oauth_token'] = $_SESSION['oauth_request_token'];
+    $request_token['oauth_token_secret'] = $_SESSION['oauth_request_token_secret'];
 
     if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
      echo "Abort! something's gone very wrong!";
