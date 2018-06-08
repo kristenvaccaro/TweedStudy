@@ -50,9 +50,9 @@
 
     // unset($connection);
 
-    echo "<br> well are we getting here????<br>"
+    echo "<br> well are we getting here????<br>";
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
-    echo "<br> almost positive not getting here<br>"
+    echo "<br> almost positive not getting here<br>";
     $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
     $_SESSION['access_token'] = $access_token;
 
