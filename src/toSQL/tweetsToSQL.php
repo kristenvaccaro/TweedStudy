@@ -27,7 +27,6 @@
     if ( $json ) {
 
         $tweet_id=NULL;
-        $userid=NULL;
         $text=NULL;
         $popularity=NULL;
         $posterFrequency=NULL;
