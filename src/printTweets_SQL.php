@@ -320,16 +320,6 @@
                                        "popular_bool" => array($popular_bool, " "),
                                        );
 
-        if($distanceSliderValue !== 0.501){
-            if($distanceSliderValue > .5){
-                //                echo "are we getting here?";
-                $sql_filter_statements["closeFriends_bool"][1] = "LEFT JOIN `friends` ON `data`.`user_screen_name` = `friends`.`screen_name` WHERE `friends`.`user_id` = {$user_id} AND `friends`.`computed_rank` > ".$fixdistance." ";
-            }
-            elseif($distanceSliderValue < .5){
-                //                echo "are we getting here? 2";
-                $sql_filter_statements["closeFriends_bool"][1] = "LEFT JOIN `friends` ON `data`.`user_screen_name` = `friends`.`screen_name` WHERE `friends`.`user_id` = {$user_id} AND `friends`.`computed_rank` < ".$fixdistance." ";
-            }
-        }
 
         //        echo "popularity slider value: ".$popularitySliderValue."<br>";
         if($popularitySliderValue !== .501){
@@ -354,12 +344,8 @@
 
         //	    echo 'USERID IS ' . $user_id . "<br>";
         //Compose statement
-        if($closeFriends_bool || $distantFriends_bool){
-            $sql_syntax = "SELECT * FROM `data` ";
-        }
-        else{
-            $sql_syntax = "SELECT * FROM `data` WHERE user_id = {$user_id} ";
-        }
+        $sql_syntax = "SELECT * FROM `data` WHERE user_id = {$user_id} ";
+
 
         $sql = $sql_syntax . $sql_filter . "ORDER BY tweet_id DESC LIMIT 10";
 
