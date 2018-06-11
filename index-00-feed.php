@@ -5,20 +5,20 @@ echo '<!-- instructions -->
 
     <div class="row" style="margin-bottom: 14px;">
         <!-- <div class="col-md-2">
-        <h3 style="margin-left: 14px;">Instructions</h3>
+        <h3 style="margin-left: 14px;">Short News Feed</h3>
         </div> -->
 
-        <div class="col-md-7">
-            <h4 style="margin-left: 14px;  line-height: 1.5;">Imagine you are browsing this feed leisurely (e.g. on a Sunday morning while drinking coffee). Please browse for a minimum of 30-60 seconds as you would in that situation.</h4>
-        </div>';
+        // <div class="col-md-7">
+        //     <h4 style="margin-left: 14px;  line-height: 1.5;">Imagine you are browsing this feed leisurely (e.g. on a Sunday morning while drinking coffee). Please browse for a minimum of 30-60 seconds as you would in that situation.</h4>
+        // </div>';
 
 
         if ($value2 === "real" or $value2 === "random") {
 
         echo '<!-- controls constantly show atm-->
-        <div class="col-md-5">
-            <h4 style="margin-left: 15px; margin-right: 15px; line-height: 1.5;">Controls are available for this news feed. Please use them to make your ideal feed for leisurely browsing. Please try at least 3 control settings.</h4>
-        </div>';
+        // <div class="col-md-5">
+        //     <h4 style="margin-left: 15px; margin-right: 15px; line-height: 1.5;">Controls are available for this news feed. Please use them to make your ideal feed for leisurely browsing. Please try at least 3 control settings.</h4>
+        // </div>';
         }else{ echo '<!-- no controls -->
         <div class="col-md-5">
         </div>';
