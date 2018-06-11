@@ -40,10 +40,6 @@
             // print_r($tweet);
             // echo "<br> <br>";
 
-            echo "<br>in tweetstosql loop<br>";
-            var_dump($tweet);
-            echo "<br>what's in tweet var?<br>";
-
         // Set retweet and favorite counts
             $retweetCount = $tweet["retweet_count"];
             $favoriteCount = $tweet["favorite_count"];
@@ -82,6 +78,10 @@
             $userName = $tweet['user']['name'];
             $tweetTime = $tweet['created_at'];
             $urlArray = [];
+
+            echo "<br>in tweetstosql loop<br>";
+            var_dump($tweet_id);
+            echo "<br>what's in tweet var?<br>";
             //                                var_dump($tweet["entities"]["media"][0]["media_url"]);
             //                                echo "<br>";
 
@@ -144,7 +144,7 @@
             $tweetArray = preg_replace("/[^a-zA-Z 0-9]+/", "", $tweetArray); // Remove punctuations
             $tweetArray = array_filter($tweetArray); //Remove all empty elements
             $tweetArray = array_values($tweetArray); //Re-key array numerically
-if(!function_exists('endsWith')){
+            if(!function_exists('endsWith')){
             function endsWith($haystack, $needle) {
               // search forward starting from end minus needle length characters
               return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== false);
