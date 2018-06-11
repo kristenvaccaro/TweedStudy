@@ -104,7 +104,7 @@ function controlPanel()
     <div class="row" style="margin: 0 0; background-color:#efefef;">
     <div class="col-lg-12" id="header-footer">
         <span id="pagecounter"> </span>
-        <h1 class="page-header">Instructions
+        <h1 class="page-header">Short News Feed
         </h1>
 
     </div>
