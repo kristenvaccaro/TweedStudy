@@ -108,6 +108,12 @@
             $urlArray = $tweet["extended_entities"]["media"][0]["media_url"];
             $tweetUrl = json_encode($tweet["entities"]["urls"][0]["url"]);
             $tweetImg = $tweet["extended_entities"]["media"][0]["media_url"];
+            echo "<br>entities now<br>";
+            var_dump($tweet["extended_entities"]);
+            var_dump($tweet["extended_entities"]["media"]);
+            var_dump($tweet["extended_entities"]["media"][0]);
+            var_dump($tweet["extended_entities"]["media"][0]["media_url"]);
+            echo "<br>over with entities<br>";
             if($tweet["extended_entities"]["media"][0]["type"] == "photo"){
                 $pic = 1;
             } else {
