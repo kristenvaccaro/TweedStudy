@@ -122,8 +122,8 @@ function controlPanel()
 
         <div class="row splitpage" id="p'.$page_id.'" style="display:inline; margin: 0 0;">
         ';
-    echo '<div style="display:inline" class="controltype">'.$value.'</div>';
-    echo '<div style="display:inline" class="rrn">'.$value2.'</div>';
+    echo '<div style="display:none" class="controltype">'.$value.'</div>';
+    echo '<div style="display:none" class="rrn">'.$value2.'</div>';
 
     include ('index-00-feed.php');
 
