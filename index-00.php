@@ -100,19 +100,16 @@ function controlPanel()
 
 <div class="container">
 
-<!-- Page Heading -->
-<div class="row" style="margin: 0 0; background-color:#efefef;">
-<div class="col-lg-12" id="header-footer">
-<span id="pagecounter"> </span>
-<h1 class="page-header">Instructions
-</h1>
+    <!-- Page Heading -->
+    <div class="row" style="margin: 0 0; background-color:#efefef;">
+    <div class="col-lg-12" id="header-footer">
+        <span id="pagecounter"> </span>
+        <h1 class="page-header">Instructions
+        </h1>
 
+    </div>
+    </div>
 
-
-</div>
-</div>
-
-<div>
 
 
 <?php
@@ -120,25 +117,19 @@ function controlPanel()
     $page_id = 1;
     $value="popularity";
     $value2="real";
-        echo '<!-- /.row -->
-        <!-- News Feed + Instructions -->
+
+    echo '<!-- News Feed + Instructions -->
 
         <div class="row splitpage" id="p'.$page_id.'" style="display:inline; margin: 0 0;">
         ';
-        echo '<div style="display:none" class="controltype">'.$value.'</div>';
-        echo '<div style="display:none" class="rrn">'.$value2.'</div>';
+    echo '<div style="display:inline" class="controltype">'.$value.'</div>';
+    echo '<div style="display:inline" class="rrn">'.$value2.'</div>';
 
-        include ('index-00-feed.php');
+    include ('index-00-feed.php');
 
-            echo '
-            </div>';
-        }
-
-    }
     echo '</div>';
-    ?>
-
-</div>
+    echo '</div>';
+?>
 
 <div class="container">
 
@@ -168,7 +159,7 @@ function controlPanel()
             <!-- /.row -->
         </footer>
 
-    </div>
+</div>
     <!-- /.container -->
 
     <!-- jQuery -->
