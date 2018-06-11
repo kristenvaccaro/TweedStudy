@@ -33,16 +33,16 @@
 
         $response = json_decode($jsonTweets,true);
 
-        echo "<br>in tweetstosql<br>";
-        var_dump($response);
-        echo "<br>anything in json var?<br>";
-
     // Evaluate each response
         foreach($response as $key => $tweet){
             // print_r($tweet['entities']);
             // print_r($tweet['text']);
             // print_r($tweet);
             // echo "<br> <br>";
+
+            echo "<br>in tweetstosql loop<br>";
+            var_dump($tweet);
+            echo "<br>what's in tweet var?<br>";
 
         // Set retweet and favorite counts
             $retweetCount = $tweet["retweet_count"];
