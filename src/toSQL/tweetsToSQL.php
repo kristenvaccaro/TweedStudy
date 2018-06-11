@@ -219,10 +219,12 @@
         // Bind each $tweet with the paramters
         if ($stmt_data->execute() === false) {
           die('execute() failed: ' . htmlspecialchars($stmt_data->error));
+          echo "<br>failed to add<br>";
         }
 
         }
 
+        $stmt_data->execute();
         $stmt_data->close();
 
         //sentiment, popularity, poster_frequency
