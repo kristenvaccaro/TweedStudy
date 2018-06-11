@@ -156,8 +156,8 @@ header('Access-Control-Allow-Origin: *');
 
 						<div id="loginWrap">
 			                <?php
-			echo "<b>" . $_SESSION["user"]["screen_name"];
-			echo "</b> <img src=" . $_SESSION['user']['profile_image_url'] . " alt='error'>";
+			echo "<b>" . $_SESSION["user"];
+			echo "</b> <img src=" . $_SESSION["profile_img"] . " alt='error'>";
 			?>
 											<a href="logout.php"><button class="btn" id="logout">Logout</button></a>
 					</div>

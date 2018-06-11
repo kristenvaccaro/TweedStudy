@@ -67,7 +67,7 @@
             }
 
 
-            var_dump($tweet);
+            // var_dump($tweet);
         // Set $tweet_id
             $tweet_id = $tweet['id'];
         // Initalize user parameters
