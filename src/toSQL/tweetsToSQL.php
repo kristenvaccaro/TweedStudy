@@ -79,9 +79,7 @@
             $tweetTime = $tweet['created_at'];
             $urlArray = [];
 
-            echo "<br>in tweetstosql loop<br>";
-            var_dump($tweet_id);
-            echo "<br>what's in tweet var?<br>";
+
             //                                var_dump($tweet["entities"]["media"][0]["media_url"]);
             //                                echo "<br>";
 
@@ -199,6 +197,12 @@
             // else{
             //     echo "not connected";
             // }
+
+
+        $alldata = [$tweet_id, $userid, $text, $popularity, $posterFrequency, $verified, $happyValue, $retweet, $pic, $link, $userUrl, $userImg, $userSN, $tweetTime, $tweetUrl, $tweetImg, $tweetHash, $userName, $retweetCount, $favoriteCount, $retweet_user_screen_name, $retweet_user_name, $retweet_user_profile_img, $retweet_user_url, $video, $video_url];
+        echo "<br> testing all the data <br>";
+        var_dump($alldata);
+        echo "<br> is anything in alldata? <br>";
 
 
         // Bind each $tweet with the paramters
