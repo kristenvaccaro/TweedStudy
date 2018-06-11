@@ -23,9 +23,6 @@
         die('bind_param() failed: ' . htmlspecialchars($stmt_data->error));
     }
 
-    echo "<br>in tweetstosql<br>";
-    var_dump($json);
-    echo "<br>anything in json var?<br>";
 
     if ( $json ) {
 
@@ -35,6 +32,11 @@
         $jsonTweets = json_encode($json);
 
         $response = json_decode($jsonTweets,true);
+
+        echo "<br>in tweetstosql<br>";
+        var_dump($response);
+        echo "<br>anything in json var?<br>";
+
     // Evaluate each response
         foreach($response as $key => $tweet){
             // print_r($tweet['entities']);
