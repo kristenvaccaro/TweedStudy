@@ -203,6 +203,8 @@
 
 
         $alldata = [$tweet_id, $userid, $text, $popularity, $posterFrequency, $verified, $happyValue, $retweet, $pic, $link, $userUrl, $userImg, $userSN, $tweetTime, $tweetUrl, $tweetImg, $tweetHash, $userName, $retweetCount, $favoriteCount, $retweet_user_screen_name, $retweet_user_name, $retweet_user_profile_img, $retweet_user_url, $video, $video_url];
+        echo "<br> actual full data <br>";
+        var_dump($tweet);
         echo "<br> testing all the data <br>";
         var_dump($alldata);
         echo "<br> is anything in alldata? <br>";
