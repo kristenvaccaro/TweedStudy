@@ -23,6 +23,9 @@
         die('bind_param() failed: ' . htmlspecialchars($stmt_data->error));
     }
 
+    echo "<br>in tweetstosql<br>";
+    var_dump($json);
+    echo "<br>anything in json var?<br>";
 
     if ( $json ) {
 
