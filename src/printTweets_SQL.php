@@ -182,7 +182,7 @@
     function printTweets_SQL_short(){
 
         //SQL Authorization
-        $servername = "engr-cpanel-mysql.engr.illinois.edu";
+        $servername = "localhost";
         $username = "twitterf_user";
         $password = "IIA@kT$7maLt";
         $dbname = "twitterf_tweet_store";
@@ -387,7 +387,7 @@
     function printTweets_SQL_rand(){
 
         //SQL Authorization
-        $servername = "engr-cpanel-mysql.engr.illinois.edu";
+        $servername = "localhost";
         $username = "twitterf_user";
         $password = "IIA@kT$7maLt";
         $dbname = "twitterf_tweet_store";
@@ -567,7 +567,7 @@
 
 
         //SQL Authorization
-        $servername = "engr-cpanel-mysql.engr.illinois.edu";
+        $servername = "localhost";
         $username = "twitterf_user";
         $password = "IIA@kT$7maLt";
         $dbname = "twitterf_tweet_store";
