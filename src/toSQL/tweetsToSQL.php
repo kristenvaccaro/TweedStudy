@@ -102,10 +102,13 @@
             //                                        $urlArray[] = $url;
             //                                    }
 
-            $urlArray = $tweet["entities"]["media"][0]["media_url"];
-            $tweetUrl = json_encode($tweet["entities"]["urls"]);
-            $tweetImg = serialize($urlArray);
-            if($tweet["entities"]["media"][0]["type"] == "photo"){
+            // $urlArray = $tweet["entities"]["media"][0]["media_url"];
+            // $tweetUrl = json_encode($tweet["entities"]["urls"]);
+            // $tweetImg = serialize($urlArray);
+            $urlArray = $tweet["extended_entities"]["media"][0]["media_url"];
+            $tweetUrl = json_encode($tweet["entities"]["urls"][0]["url"]);
+            $tweetImg = $tweet["extended_entities"]["media"][0]["media_url"];
+            if($tweet["extended_entities"]["media"][0]["type"] == "photo"){
                 $pic = 1;
             } else {
                 $pic = 0;
