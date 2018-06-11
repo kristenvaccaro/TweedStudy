@@ -80,7 +80,7 @@
 
     $user = $fulluser->screen_name;
     $user_id= $fulluser->id;
-    $user_id= $fulluser->profile_image_url;
+    $profile_img= $fulluser->profile_image_url;
     $_SESSION["user_id"] = $user_id; // Session variable that hold $user_id
     $_SESSION["user"] = $user; // Session variable that holds the user array.
     $_SESSION["profile_img"] = $profile_img;
