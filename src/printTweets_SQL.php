@@ -181,6 +181,7 @@
 
     function printTweets_SQL_short(){
 
+
         //SQL Authorization
         $servername = "localhost";
         $username = "twitterf_user";
@@ -195,7 +196,7 @@
 
         $user_id = $_SESSION["user_id"];
 
-        //			var_dump($_SESSION['button']);
+        //          var_dump($_SESSION['button']);
 
         // echo $_SESSION['dataString'];
         // echo $_SESSION['value'];
@@ -214,17 +215,17 @@
             $distanceSliderValue = $value;
             $closeFriends_bool = "true";
         } elseif (strpos($dataString, 'popularity') !== false) {
-          $_SESSION['button']['popularitySlider'] = 'true';
-          $popularitySlider = $_SESSION['button']['popularitySlider'];
-          $popularitySliderValue = $value;
-          $popular_bool = "true";
+            $_SESSION['button']['popularitySlider'] = 'true';
+            $popularitySlider = $_SESSION['button']['popularitySlider'];
+            $popularitySliderValue = $value;
+            $popular_bool = "true";
         }
 
-//        $distanceSlider = $_SESSION['button']['distanceSlider'];
-//        $distanceSliderValue = $_SESSION['button']['distanceSliderValue'];
-//
-//        $popularitySlider = $_SESSION['button']['popularitySlider'];
-//        $popularitySliderValue = $_SESSION['button']['popularitySliderValue'];
+        //        $distanceSlider = $_SESSION['button']['distanceSlider'];
+        //        $distanceSliderValue = $_SESSION['button']['distanceSliderValue'];
+        //
+        //        $popularitySlider = $_SESSION['button']['popularitySlider'];
+        //        $popularitySliderValue = $_SESSION['button']['popularitySliderValue'];
 
         $sessionArray = ['popularitySlider', 'popularitySliderValue', 'distanceSlider', 'distanceSliderValue'];
 
@@ -268,10 +269,10 @@
         $distanceSliderValue = (float)$distanceSliderValue;
         $popularitySliderValue = (float)$popularitySliderValue;
 
-//        echo $distanceSliderValue;
-//        echo $popularitySliderValue;
+        //        echo $distanceSliderValue;
+        //        echo $popularitySliderValue;
 
-//        var_dump($distanceSliderValue);
+        //        var_dump($distanceSliderValue);
 
         /// then assign each of those points to the fixdistance variable
 
@@ -285,10 +286,9 @@
         }
         elseif ($distanceSliderValue > .8) {
             $fixdistance = $third_close;
-            // echo $fixdistance;
         }
 
-//        var_dump($popularitySliderValue);
+        //        var_dump($popularitySliderValue);
 
         /// then assign each of those points to the fixdistance variable
         if ($popularitySliderValue < .2) {
@@ -300,16 +300,16 @@
             $fixpopular = $third_popularity;
         }
 
-//        var_dump($first_popularity);
-//        var_dump($second_popularity);
-//        var_dump($third_popularity);
+        //        var_dump($first_popularity);
+        //        var_dump($second_popularity);
+        //        var_dump($third_popularity);
 
-//        echo $first_close;
+        //        echo $first_close;
         // echo $popularitySliderValue;
         // echo "what is going on here";
         // echo $fixpopular;
-//        echo $third_close;
-//        echo $fixdistance;
+        //        echo $third_close;
+        //        echo $fixdistance;
 
 
         // Execute two different base SQL syntaxes depending on if where care about closeness.
@@ -320,10 +320,20 @@
                                        "popular_bool" => array($popular_bool, " "),
                                        );
 
+        if($distanceSliderValue !== 0.501){
+            if($distanceSliderValue > .5){
+                //                echo "are we getting here?";
+                $sql_filter_statements["closeFriends_bool"][1] = "LEFT JOIN `friends` ON `data`.`user_screen_name` = `friends`.`screen_name` WHERE `friends`.`user_id` = {$user_id} AND `friends`.`computed_rank` > ".$fixdistance." ";
+            }
+            elseif($distanceSliderValue < .5){
+                //                echo "are we getting here? 2";
+                $sql_filter_statements["closeFriends_bool"][1] = "LEFT JOIN `friends` ON `data`.`user_screen_name` = `friends`.`screen_name` WHERE `friends`.`user_id` = {$user_id} AND `friends`.`computed_rank` < ".$fixdistance." ";
+            }
+        }
 
         //        echo "popularity slider value: ".$popularitySliderValue."<br>";
         if($popularitySliderValue !== .501){
-            //			echo $popularitySliderValue.$_POST['middle']."<br>";
+            //          echo $popularitySliderValue.$_POST['middle']."<br>";
             if($popularitySliderValue > .5){
                 $sql_filter_statements["popular_bool"][1] = "AND tweet_popularity > ".$fixpopular." ";
             }elseif($popularitySliderValue < .5){
@@ -342,10 +352,14 @@
             }
         }
 
-        //	    echo 'USERID IS ' . $user_id . "<br>";
+        //      echo 'USERID IS ' . $user_id . "<br>";
         //Compose statement
-        $sql_syntax = "SELECT * FROM `data` WHERE user_id = {$user_id} ";
-
+        if($closeFriends_bool || $distantFriends_bool){
+            $sql_syntax = "SELECT * FROM `data` ";
+        }
+        else{
+            $sql_syntax = "SELECT * FROM `data` WHERE user_id = {$user_id} ";
+        }
 
         $sql = $sql_syntax . $sql_filter . "ORDER BY tweet_id DESC LIMIT 10";
 
@@ -362,7 +376,7 @@
         else
         {
             while($row = $result->fetch_assoc()){
-                printEachTweet($row);
+                                printEachTweet($row);
             }
         }
 
