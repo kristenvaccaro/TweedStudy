@@ -42,7 +42,7 @@
 
 		$url = $connection->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token'])); ?>
 
-    <div class="well" id="instructions" style="width:100%; font-size:16px; margin:0px auto;text-align:justify;padding-left:50px;padding-right:50px;background:#F2F2F2">
+<!--     <div class="well" id="instructions" style="width:100%; font-size:16px; margin:0px auto;text-align:justify;padding-left:50px;padding-right:50px;background:#F2F2F2">
     <h3 style="color:black;">
         <strong>
             Task Instructions
@@ -60,12 +60,12 @@
 
 <div id="info" name="info" style="display:none"><span style='color:red'>You already started this task. If you need to restart, contact the researchers to delete your existing data.</span></div>
 
-</div>
+</div> -->
 
 
 
 
-<div id='survey-part' style="display:none">
+<div id='survey-part' style="display:inline">
 
 <div class="row" > <div class="classWithPad" style="margin:20px; padding:20px;"> <div class="col-xs-12" >
 
@@ -107,8 +107,8 @@
 </div>
 
 </div>
-</div>
-</div>
+<!-- </div> -->
+<!-- </div> -->
 </body>
 
 <script>
